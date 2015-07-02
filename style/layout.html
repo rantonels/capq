@@ -10,7 +10,7 @@ $endfor$
 $if(date-meta)$
   <meta name="dcterms.date" content="$date-meta$">
 $endif$
-  <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+  <title>CAPQ</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -32,8 +32,14 @@ $endif$
 $for(header-includes)$
   $header-includes$
 $endfor$
+
+<!--<script src="js/jquery-1.11.3.js"></script>
+<script src="js/jquery.feyn-1.0.1.min.js"></script>--!>
 </head>
 <body>
+<div class="version">
+$version$
+</div>
 $for(include-before)$
 $include-before$
 $endfor$
@@ -51,6 +57,8 @@ $if(date)$
 $endif$
 </header>
 $endif$
+
+
 $if(toc)$
 <nav id="$idprefix$TOC">
 $toc$

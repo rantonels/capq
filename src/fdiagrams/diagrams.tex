@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage{feynmp}
+\begin{document}
+    \unitlength = 1mm
+
+
+
+    \begin{fmffile}{bare}
+	\begin{fmfgraph}(20,40)
+	    \fmfleft{in}
+	    \fmfright{out}
+	    \fmf{photon}{in,out}
+	\end{fmfgraph}
+    \end{fmffile}
+
+
+
+\begin{fmffile}{one-floop}
+\begin{fmfgraph}(30,30)
+\fmfleft{i}
+\fmfright{o}
+\fmf{photon,tension=5}{i,v1}
+\fmf{photon,tension=5}{v2,o}
+\fmf{fermion,left,tension=2}{v1,v2,v1}
+\fmf{phantom}{v1,v2}
+\fmfdot{v1,v2}
+\end{fmfgraph}
+\end{fmffile}
+
+\begin{fmffile}{dressed}
+\begin{fmfgraph}(30,30)
+    \fmfleft{in}
+    \fmfright{out}
+    \fmf{photon}{in,v1}
+    \fmfblob{.3w}{v1}
+    \fmf{photon}{v1,out}
+\end{fmfgraph}
+\end{fmffile}
+
+\begin{fmffile}{onepee}
+\begin{fmfgraph}(30,30)
+    \fmfleft{in}
+    \fmfright{out}
+    \fmf{photon}{in,v1}
+    \fmf{photon}{v1,out}
+    \fmfv{decor.shape=pentagram,decor.filled=shaded,decor.size=.4w}{v1}
+\end{fmfgraph}
+\end{fmffile}
+	    
+\begin{fmffile}{twopee}
+\begin{fmfgraph}(30,30)
+    \fmfleft{in}
+    \fmfright{out}
+    \fmf{photon,tension=5}{in,v1}
+    \fmf{photon,tension=3}{v1,v2}
+    \fmf{photon,tension=5}{v2,out}
+    \fmfv{decor.shape=pentagram,decor.filled=shaded,decor.size=.4w}{v1}
+    \fmfv{decor.shape=pentagram,decor.filled=shaded,decor.size=.4w}{v2}
+\end{fmfgraph}
+\end{fmffile}
+
+\begin{fmffile}{threepee}
+\begin{fmfgraph}(40,30)
+    \fmfleft{in}
+    \fmfright{out}
+    \fmf{photon,tension=5}{in,v1}
+    \fmf{photon,tension=3}{v1,v2}
+    \fmf{photon,tension=3}{v2,v3}
+    \fmf{photon,tension=5}{v3,out}
+    \fmfv{decor.shape=pentagram,decor.filled=shaded,decor.size=.3w}{v1}
+    \fmfv{decor.shape=pentagram,decor.filled=shaded,decor.size=.3w}{v2}
+    \fmfv{decor.shape=pentagram,decor.filled=shaded,decor.size=.3w}{v3}
+\end{fmfgraph}
+\end{fmffile}
+
+\begin{fmffile}{bibubble}
+\begin{fmfgraph}(30,30)
+    \fmfleft{in}
+    \fmfright{out}
+    \fmftop{up}
+    \fmfbottom{bt}
+    \fmf{phantom,tension=10}{up,v4}
+    \fmf{phantom,tension=10}{bt,v3}
+    \fmf{photon,tension=10}{in,v1}
+    \fmf{photon,tension=10}{v2,out}
+    \fmf{fermion,left,tension=4}{v1,v2}
+    \fmf{fermion,left,tension=4}{v2,v1}
+    \fmf{photon,tension=13}{v3,v4}
+    \fmf{phantom}{v1,v2}
+\end{fmfgraph}
+\end{fmffile}
+	
+\begin{fmffile}{twobubble}
+\begin{fmfgraph}(52,30)
+	\fmfleft{i}
+	\fmfright{o}
+	\fmf{photon,tension=5}{i,v1}
+	\fmf{fermion,left,tension=2}{v1,v2,v1}
+	\fmf{photon,tension=5}{v2,v3}	
+	\fmf{fermion,left,tension=2}{v3,v4,v3}
+	\fmf{photon,tension=5}{v4,o}
+\end{fmfgraph}
+\end{fmffile}
+	    
+\begin{fmffile}{yesp}
+\begin{fmfgraph}(30,30)
+	\fmfleft{i}
+
+	\fmftop{t}
+	\fmfbottom{b}
+	
+	\fmf{phantom,tension=3}{t,u1}
+	\fmf{phantom,tension=3}{t,u2}
+	\fmf{phantom,tension=3}{b,d1}
+	\fmf{phantom,tension=3}{b,d2}
+
+	\fmf{photon,tension=3}{i,v1}
+	\fmf{photon,tension=3}{v2,o}
+
+	\fmf{fermion,tension=1}{v1,u1}
+	\fmf{fermion,tension=1}{u1,d1}
+	\fmf{fermion,tension=1}{d1,v1}
+
+	\fmf{fermion,tension=1}{v2,u2}
+	\fmf{fermion,tension=1}{u2,d2}
+	\fmf{fermion,tension=1}{d2,v2}
+
+	\fmf{photon,tension=.2}{u1,u2}
+	\fmf{photon,tension=.2}{d1,d2}
+
+	\fmfright{o}
+
+
+	
+\end{fmfgraph}
+\end{fmffile}
+
+\end{document}
