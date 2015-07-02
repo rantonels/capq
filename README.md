@@ -1,7 +1,7 @@
 CAPQ
 ====
 
-The Constantly Asked Physics Questions is my personal FAQ for physics questions. It's in early development.
+The Constantly Asked Physics Questions is my personal FAQ for physics questions. It's in early development. It's available [here](https://rantonels.github.io/capq).
 
 It is simultaneously built as an .html page and a .pdf booklet with pandoc.
 
