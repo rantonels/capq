@@ -35,7 +35,7 @@ However.
 
 Consider the following change of variables in the primed Universe:
 
-$$ x' \rightarrow \tilde{x}' = x'/2, \quad t' \rightarrow \tilde{t}' = x'$$
+$$ x' \rightarrow \tilde{x}' = x'/2, \quad t' \rightarrow \tilde{t}' = t'$$
 
 The tilded coordinates are just the normal coordinates, but with space stretched by a factor of 2. In these coordinates, the value of the speed of light is:
 
