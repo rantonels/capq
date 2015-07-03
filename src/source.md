@@ -76,7 +76,9 @@ Fluid Mechanics {#FM}
 Classical Electrodynamics {#CED}
 -------------------------
 
-### CED1 - What is the Maxwell/Stress tensor and how does it work? {#CED1}
+### CED1 - What is the Maxwell stress tensor $\mathbf{\sigma}$ and how does it work? {#CED1}
+
+*note: do not confuse this with the Maxwell tensor $F^{\mu\nu}$, which is the electromagnetic field.*
 
 Consider linear momentum:
 
@@ -129,7 +131,7 @@ This source term encapsulate the passage of momentum from charged matter to fiel
 
 So the Maxwell stress tensor is just $\sigma_f $, the stress tensor for only the electromagnetic field.
 
-What I've detailed up to now is the physical interpretation in general of the stress tensor in any local theory, which is what you asked about. The actual form of the tensor for electromagnetism in terms of $E$ & $B$ is computed from the Poynting vector in a way that Griffiths can explain much better than me.
+What I've detailed up to now is the physical interpretation in general of the stress tensor in any local theory; classical EM is just the first field theory one usually encounters. The actual form of the tensor for electromagnetism in terms of $E$ & $B$ is computed from the Poynting vector and a full derivation is presented in any decent CED textbook.
 
 Analytical Mechanics {#AM}
 --------------------

@@ -24,3 +24,15 @@ and only if you plan on editing `src/fdiagrams/diagrams.tex` for Feynman diagram
 - inkscape
 
 to build the webpage + pdf, `cd` to the project folder and run `make`. If you need to rebuild the Feynman diagrams (only, again, if you edited `src/fdiagrams/diagrams.tex`), you're going to see a swarm of inkscape windows flash on the screen. Ignore him, he's weird.
+
+If you need to compile only one of the two files `index.html` or `tex/capq-booklet.pdf` (say, "do I look like I know what a lay-teck is?"), just run
+
+```
+make index.html
+```
+
+or
+
+```
+make tex/capq-booklet.pdf
+```

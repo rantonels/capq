@@ -17,9 +17,9 @@
 </head>
 <body>
 <div class="version">
-commit 67359c56383ae20ad3175e18cbe9041547b95f9e
+commit 6b186312029c11fc9d807a9e0f9bf756fc02b85c
 Author: Riccardo Antonelli <riccardo.antonelli@hotmail.it>
-Date:   Fri Jul 3 14:17:40 2015 +0200
+Date:   Fri Jul 3 15:38:21 2015 +0200
 </div>
 <h2 class="pretitle">the handy booklet of</h2>
 <h1 class="bigtitle">Constantly Asked <br>Physics Questions</h1>
@@ -51,7 +51,7 @@ Date:   Fri Jul 3 14:17:40 2015 +0200
 <li><a href="#OM">Celestial/Orbital Mechanics</a></li>
 <li><a href="#FM">Fluid Mechanics</a></li>
 <li><a href="#CED">Classical Electrodynamics</a><ul>
-<li><a href="#CED1">CED1 - What is the Maxwell/Stress tensor and how does it work?</a></li>
+<li><a href="#CED1">CED1 - What is the Maxwell stress tensor <span class="math">\(\mathbf{\sigma}\)</span> and how does it work?</a></li>
 </ul></li>
 <li><a href="#AM">Analytical Mechanics</a></li>
 <li><a href="#SR">Special Relativity</a><ul>
@@ -113,7 +113,8 @@ Date:   Fri Jul 3 14:17:40 2015 +0200
 <h2 id="OM">Celestial/Orbital Mechanics</h2>
 <h2 id="FM">Fluid Mechanics</h2>
 <h2 id="CED">Classical Electrodynamics</h2>
-<h3 id="CED1">CED1 - What is the Maxwell/Stress tensor and how does it work?</h3>
+<h3 id="CED1">CED1 - What is the Maxwell stress tensor <span class="math">\(\mathbf{\sigma}\)</span> and how does it work?</h3>
+<p><em>note: do not confuse this with the Maxwell tensor <span class="math">\(F^{\mu\nu}\)</span>, which is the electromagnetic field.</em></p>
 <p>Consider linear momentum:</p>
 <p><span class="math">\[ P^i \]</span></p>
 <p>it's the i component of the total linear momentum in the system. It will be an integral over space of some linear momentum density I'll call <span class="math">\(p^i \)</span>:</p>
@@ -142,7 +143,7 @@ Date:   Fri Jul 3 14:17:40 2015 +0200
 <p>Where I have defined the source term <span class="math">\(s\)</span>.</p>
 <p>This source term encapsulate the passage of momentum from charged matter to fields. So field momentum is not conserved separately, and s represents &quot;generation&quot; of momentum from charges. Fittingly, the equation is now called a continuity equation with sources.</p>
 <p>So the Maxwell stress tensor is just <span class="math">\(\sigma_f \)</span>, the stress tensor for only the electromagnetic field.</p>
-<p>What I've detailed up to now is the physical interpretation in general of the stress tensor in any local theory, which is what you asked about. The actual form of the tensor for electromagnetism in terms of <span class="math">\(E\)</span> &amp; <span class="math">\(B\)</span> is computed from the Poynting vector in a way that Griffiths can explain much better than me.</p>
+<p>What I've detailed up to now is the physical interpretation in general of the stress tensor in any local theory; classical EM is just the first field theory one usually encounters. The actual form of the tensor for electromagnetism in terms of <span class="math">\(E\)</span> &amp; <span class="math">\(B\)</span> is computed from the Poynting vector and a full derivation is presented in any decent CED textbook.</p>
 <h2 id="AM">Analytical Mechanics</h2>
 <h2 id="SR">Special Relativity</h2>
 <h3 id="SR1">SR1 - In what sense does <span class="math">\(E=mc^2\)</span>, and what does it mean?</h3>
