@@ -288,7 +288,7 @@ Nuclear Physics {#NP}
 Quantum Electrodynamics {#QED}
 -----------------------
 
-### QED1 - How does $1+2+3+\ldots=-1/12$/$\zeta$-regularization enter in the Casimir effect?
+### QED1 - How does $1+2+3+\ldots=-1/12$/$\zeta$-regularization enter in the Casimir effect? {#QED1}
 
 The Casimir effect is an attractive force between very close parallel conducting plates and it's a consequence of the quantum nature of the EM field. There are numerous ways to derive it, with various levels of rigour, but the one employing zeta-regularization holds a special place in my heart.
 
