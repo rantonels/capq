@@ -390,7 +390,7 @@ AFAIK the Casimir force with the expression above was experimentally observed in
 
 Good reads:
 
-- For more on the justification and meaning of the use of $\zeta$-regularisation in the Casimir effect and vacuum energy: [https://terrytao.wordpress.com/2010/04/10/the-euler-maclaurin-formula-bernoulli-numbers-the-zeta-function-and-real-variable-analytic-continuation/](https://en.wikiversity.org/wiki/Quantum_mechanics/Casimir_effect_in_one_dimension)
+- For more on the justification and meaning of the use of $\zeta$-regularisation in the Casimir effect and vacuum energy: [https://en.wikiversity.org/wiki/Quantum_mechanics/Casimir_effect_in_one_dimension](https://en.wikiversity.org/wiki/Quantum_mechanics/Casimir_effect_in_one_dimension)
 - Terrence Tao on $\zeta$-reg: [https://terrytao.wordpress.com/2010/04/10/the-euler-maclaurin-formula-bernoulli-numbers-the-zeta-function-and-real-variable-analytic-continuation/](https://terrytao.wordpress.com/2010/04/10/the-euler-maclaurin-formula-bernoulli-numbers-the-zeta-function-and-real-variable-analytic-continuation/)
 - For a concise derivation in three dimensions using $\zeta$-reg: [https://en.wikipedia.org/wiki/Casimir_effect#Derivation_of_Casimir_effect_assuming_zeta-regularization](https://en.wikipedia.org/wiki/Casimir_effect#Derivation_of_Casimir_effect_assuming_zeta-regularization)
 - Some people are strongly critical or at least skeptic of vacuum fluctuations as the correct way to see the Casimir effect. A sensible argument is [http://arxiv.org/abs/hep-th/0503158](http://arxiv.org/abs/hep-th/0503158)
