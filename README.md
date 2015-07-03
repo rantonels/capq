@@ -5,7 +5,7 @@ The Constantly Asked Physics Questions is my personal FAQ for physics questions.
 
 It is simultaneously built as an .html page and a .pdf booklet with pandoc.
 
-You can contribute your own question+answer pairs. Just clone, edit the file `src/source.md` and give me a pull request.
+You can contribute your own question+answer pairs. If you are completely git-illitterate, you can [just PM me answers on reddit](http://reddit.com/u/rantonels). If you are git-positive, just clone, edit the file `src/source.md` and give me a pull request.
 
 `src/source.md` is a markdown file, so it's really easy to write answers. You can add inline and not-inline math with MathJax syntax. Just read a bit of how the other questions are formatted and especially the title header.
 
