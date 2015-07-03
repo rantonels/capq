@@ -17,9 +17,9 @@
 </head>
 <body>
 <div class="version">
-commit 45be20a2fe1d961f05938225b205cd12e03dcef8
+commit 67359c56383ae20ad3175e18cbe9041547b95f9e
 Author: Riccardo Antonelli <riccardo.antonelli@hotmail.it>
-Date:   Fri Jul 3 08:26:24 2015 +0200
+Date:   Fri Jul 3 14:17:40 2015 +0200
 </div>
 <h2 class="pretitle">the handy booklet of</h2>
 <h1 class="bigtitle">Constantly Asked <br>Physics Questions</h1>
@@ -215,7 +215,7 @@ Date:   Fri Jul 3 08:26:24 2015 +0200
 <h2 id="NP">Nuclear Physics</h2>
 <h2 id="QED">Quantum Electrodynamics</h2>
 <h3 id="qed1---how-does-123ldots-112zeta-regularization-enter-in-the-casimir-effect">QED1 - How does <span class="math">\(1+2+3+\ldots=-1/12\)</span>/<span class="math">\(\zeta\)</span>-regularization enter in the Casimir effect?</h3>
-<p>The Casimir effect is an attractive force between very close parallel conducting plates and it's a consequence of the quantum nature of the EM field. There are numerous ways to derive it, with various levels of rigour, but the one employing zeta-regularization holds a special place.</p>
+<p>The Casimir effect is an attractive force between very close parallel conducting plates and it's a consequence of the quantum nature of the EM field. There are numerous ways to derive it, with various levels of rigour, but the one employing zeta-regularization holds a special place in my heart.</p>
 <p>For simplicity, reduce from three to just one spatial dimension. This doesn't change the essential points of the computation. Then our parallel plates are actually two barriers, one at <span class="math">\(x=0\)</span> and one at <span class="math">\(x=a\)</span>, with <span class="math">\(a\)</span> the spacing. We know conductors act in a way as to make the longitudinal component of the electric field vanish on them. So we can model these boundary conditions as</p>
 <p><span class="math">\[ \vec E(t,0) = 0 \quad \quad \vec E(t,a) = 0\]</span></p>
 <p>The electric field satisfies the wave equation both inbetween and outside the plates:</p>
@@ -227,7 +227,7 @@ Date:   Fri Jul 3 08:26:24 2015 +0200
 <p><span class="math">\[ f(x) = \sum_{n=1}^\infty f_n \sin(k_n x) \]</span></p>
 <p>So let's do that for the electric field at a given time <span class="math">\(t\)</span>.</p>
 <p><span class="math">\[ \vec E(t,x) = \sum_{n=-\infty}^\infty \sum_i A_{ni}(t) \sin(k_n x) \vec e_i \]</span></p>
-<p>Since <span class="math">\(\vec E\)</span> is a vector, we have to introduce two basis polarization vectors <span class="math">\(\vec e_y\)</span>, <span class="math">\(\vec e_z\)</span> pointing in the <span class="math">\(y\)</span> and <span class="math">\(z\)</span> directions, and sum over polarization (<span class="math">\(i=y,z\)</span>). We have therefore two modes of oscillation for each value of <span class="math">\(n\)</span>, corresponding to the two polarization. The <span class="math">\(\vec e_x\)</span> polarization does not exist, because the electromagnetic field does not have a longitudinal component in free space.</p>
+<p>Since <span class="math">\(\vec E\)</span> is a vector, we have to introduce two basis polarization vectors <span class="math">\(\vec e_y\)</span>, <span class="math">\(\vec e_z\)</span> pointing in the <span class="math">\(y\)</span> and <span class="math">\(z\)</span> directions, and sum over polarization (<span class="math">\(i=y,z\)</span>). We have therefore two modes of oscillation for each value of <span class="math">\(n\)</span>, corresponding to the two polarizations. The <span class="math">\(\vec e_x\)</span> polarization does not exist, because the electromagnetic field does not have a longitudinal component in free space.</p>
 <p><span class="math">\(A_{ni}(t)\)</span> is the coefficient of the expansion of <span class="math">\(\vec E(t)\)</span> in the mode given by <span class="math">\(n\)</span> and <span class="math">\(i\)</span>, and obviously depends on time.</p>
 <p>The expression obtained for the electric field automatically satisfies the boundary conditions <em>if</em> the coefficient <span class="math">\(A_{ni}\)</span> are not too crazy (it's still an infinite sum of functions, it's no joke).</p>
 <p>Let us study the time evolution of <span class="math">\(A_{ni}\)</span>. Since the equation is linear, we just plug into the equation one single term from our expansion of the electric field:</p>
@@ -272,7 +272,12 @@ Date:   Fri Jul 3 08:26:24 2015 +0200
 </ul>
 <h2 id="HEP">Particle Physics/High Energy Physics</h2>
 <h3 id="HEP1">HEP1 - Why are photons massless?</h3>
-<p>Photons, being gauge bosons of a gauge theory, are a priori massless. However, they could in principle acquire a mass through at least a couple of mechanisms. The first is also present at the classical level and is the Higgs mechanism and variants. Why the photon is not affected by the Higgs mechanism is treated in <a href="#HEP2">HEP2</a>. The second happens upon quantization and is the quantum correction to the mass. Particles in general acquire quantum corrections to their physical parameters that can be investigated as being due with interaction with virtual particles as the original particle travels from point A to point B. The photon is again protected from this phenomenon and this is explained in <a href="#HEP3">HEP3</a>.</p>
+<p>Photons, being gauge bosons of a gauge theory, are a priori massless. At least classically, a mass term for the photon in the Lagrangian:</p>
+<p><span class="math">\[ \frac{m^2}{8\pi} A_\mu A^\mu\]</span></p>
+<p>is not invariant under the gauge transformation</p>
+<p><span class="math">\[ A_\mu \rightarrow A_\mu + \partial_\mu \Lambda \]</span></p>
+<p>and thus gauge invariance disallows a photon mass. The massive photon Lagrangian one would instead obtain with the above term is the Proca theory of the massive vector boson.</p>
+<p>However, photons could still in principle acquire a mass through at least a couple of mechanisms. The first is also present at the classical level and is the Higgs mechanism and variants, where gauge invariance is &quot;broken&quot;, in some careful sense (gauge symmetry breaking is more involved than global symmetry breaking). Why the photon is not affected by the Higgs mechanism is treated in <a href="#HEP2">HEP2</a>. The second happens upon quantization and is the quantum correction to the mass. Particles in general acquire quantum corrections to their physical parameters that can be investigated as being due with interaction with virtual particles as the original particle travels from point A to point B. The photon is again protected from this phenomenon and this is explained in <a href="#HEP3">HEP3</a>.</p>
 <h3 id="HEP2">HEP2 - Why do photons not acquire a mass through the Higgs mechanism?</h3>
 <p>By definition!</p>
 <p>Photons are by definition the single component of the original <span class="math">\(SU(2)\times U(1)\)</span> electroweak gauge field that leaves the Higgs vacuum expectation value invariant. This means that the VEV is uncharged for the photon, and the photon aquires no mass.</p>

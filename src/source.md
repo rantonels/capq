@@ -288,7 +288,7 @@ Quantum Electrodynamics {#QED}
 
 ### QED1 - How does $1+2+3+\ldots=-1/12$/$\zeta$-regularization enter in the Casimir effect?
 
-The Casimir effect is an attractive force between very close parallel conducting plates and it's a consequence of the quantum nature of the EM field. There are numerous ways to derive it, with various levels of rigour, but the one employing zeta-regularization holds a special place.
+The Casimir effect is an attractive force between very close parallel conducting plates and it's a consequence of the quantum nature of the EM field. There are numerous ways to derive it, with various levels of rigour, but the one employing zeta-regularization holds a special place in my heart.
 
 For simplicity, reduce from three to just one spatial dimension. This doesn't change the essential points of the computation. Then our parallel plates are actually two barriers, one at $x=0$ and one at $x=a$, with $a$ the spacing. We know conductors act in a way as to make the longitudinal component of the electric field vanish on them. So we can model these boundary conditions as
 
@@ -312,7 +312,7 @@ So let's do that for the electric field at a given time $t$.
 
 $$ \vec E(t,x) = \sum_{n=-\infty}^\infty \sum_i A_{ni}(t) \sin(k_n x) \vec e_i $$
 
-Since $\vec E$ is a vector, we have to introduce two basis polarization vectors $\vec e_y$, $\vec e_z$ pointing in the $y$ and $z$ directions, and sum over polarization ($i=y,z$). We have therefore two modes of oscillation for each value of $n$, corresponding to the two polarization. The $\vec e_x$ polarization does not exist, because the electromagnetic field does not have a longitudinal component in free space.
+Since $\vec E$ is a vector, we have to introduce two basis polarization vectors $\vec e_y$, $\vec e_z$ pointing in the $y$ and $z$ directions, and sum over polarization ($i=y,z$). We have therefore two modes of oscillation for each value of $n$, corresponding to the two polarizations. The $\vec e_x$ polarization does not exist, because the electromagnetic field does not have a longitudinal component in free space.
 
 $A_{ni}(t)$ is the coefficient of the expansion of $\vec E(t)$ in the mode given by $n$ and $i$, and obviously depends on time.
 
@@ -398,7 +398,17 @@ Particle Physics/High Energy Physics {#HEP}
 
 ### HEP1 - Why are photons massless? {#HEP1}
 
-Photons, being gauge bosons of a gauge theory, are a priori massless. However, they could in principle acquire a mass through at least a couple of mechanisms. The first is also present at the classical level and is the Higgs mechanism and variants. Why the photon is not affected by the Higgs mechanism is treated in [HEP2](#HEP2). The second happens upon quantization and is the quantum correction to the mass. Particles in general acquire quantum corrections to their physical parameters that can be investigated as being due with interaction with virtual particles as the original particle travels from point A to point B. The photon is again protected from this phenomenon and this is explained in [HEP3](#HEP3).
+Photons, being gauge bosons of a gauge theory, are a priori massless. At least classically, a mass term for the photon in the Lagrangian:
+
+$$ \frac{m^2}{8\pi} A_\mu A^\mu$$
+
+is not invariant under the gauge transformation
+
+$$ A_\mu \rightarrow A_\mu + \partial_\mu \Lambda $$
+
+and thus gauge invariance disallows a photon mass. The massive photon Lagrangian one would instead obtain with the above term is the Proca theory of the massive vector boson.
+
+However, photons could still in principle acquire a mass through at least a couple of mechanisms. The first is also present at the classical level and is the Higgs mechanism and variants, where gauge invariance is "broken", in some careful sense (gauge symmetry breaking is more involved than global symmetry breaking). Why the photon is not affected by the Higgs mechanism is treated in [HEP2](#HEP2). The second happens upon quantization and is the quantum correction to the mass. Particles in general acquire quantum corrections to their physical parameters that can be investigated as being due with interaction with virtual particles as the original particle travels from point A to point B. The photon is again protected from this phenomenon and this is explained in [HEP3](#HEP3).
 
 ### HEP2 - Why do photons not acquire a mass through the Higgs mechanism? {#HEP2}
 
