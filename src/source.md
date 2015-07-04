@@ -354,11 +354,11 @@ Ugh. It's divergent. The total vacuum energy inbetween the plates is infinite. P
 
 $$ U(a) = \mathcal{E}_0(a) \Rightarrow F(a) = - \frac{d}{da} U(a) $$
 
-but if $U(a)$ is infinity that's kind of difficult to work with. Note, however, that we can shift $U(a)$ by any constant without changing $F$. It's the old adage that constant energy shifts are unphysical (which is not 100% true, but it's true in this context). An interesting constant (in the sense of not depending on $a$) is the *vacuum energy in the region without the plates if the plates were not there*. We can subtract that:
+but if $U(a)$ is infinity that's kind of difficult to work with. There must be another infinity we should subtract to cancel the divergence. An interesting candidate is the *vacuum energy in the region without the plates if the plates were not there*. We can subtract that:
 
 $$ U(a) = \mathcal{E}_0(a) - \mathcal{E}_0^{\text{no plates}} $$
 
-Makes sense, it's the energy associated with putting the plates there. Now $\mathcal{E}_0^{\text{no plates}}$ is computed in a way entirely analogous to how we calculated $\mathcal{E}_0(a)$, but with a significant difference: the wavenumber $k$ is a continuous variable. Inbetween the plates the electric field was constrained by the boundary conditions and therefore only multiples of the fundamental wavenumber $k_1 = \frac{ \pi n}{a}$ were allowed. No such restriction exists without them and long story short our potential ends up being the difference of a divergent sum and a divergent integral:
+Makes sense, $U(a)$ it's the energy associated with putting the plates there. Now $\mathcal{E}_0^{\text{no plates}}$ is computed in a way entirely analogous to how we calculated $\mathcal{E}_0(a)$, but with a significant difference: the wavenumber $k$ is a continuous variable. Inbetween the plates the electric field was constrained by the boundary conditions and therefore only multiples of the fundamental wavenumber $k_1 = \frac{ \pi n}{a}$ were allowed. No such restriction exists without them and long story short our potential ends up being the difference of a divergent sum and a divergent integral:
 
 $$ U(a) = \frac{\hbar c \pi}{a} \left( \sum_{n=1}^\infty n   -  \int_0^\infty n dn \right) = \infty - \infty$$
 
