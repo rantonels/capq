@@ -139,7 +139,7 @@ What I've detailed up to now is the physical interpretation in general of the st
 
 *this answer provided by [/u/Aliudnomen](https://www.reddit.com/user/Aliudnomen)*
 
-harged particles moving in a magnetic field experience a force called the Lorentz force, given by 
+charged particles moving in a magnetic field experience a force called the Lorentz force, given by 
 
 $$\vec{F}_L = q(\vec v \times \vec B)$$
 
