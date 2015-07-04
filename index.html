@@ -17,9 +17,9 @@
 </head>
 <body>
 <div class="version">
-commit ff8a4249cf3aa385e6e87b63ed892a16aa858b9e
+commit c8c04798f80cb296e7610319f57aa9baf1140a75
 Author: Riccardo Antonelli <riccardo.antonelli@hotmail.it>
-Date:   Fri Jul 3 19:12:12 2015 +0200
+Date:   Sat Jul 4 23:49:27 2015 +0200
 </div>
 <h2 class="pretitle">the handy booklet of</h2>
 <h1 class="bigtitle">Constantly Asked <br>Physics Questions</h1>
@@ -52,6 +52,7 @@ Date:   Fri Jul 3 19:12:12 2015 +0200
 <li><a href="#FM">Fluid Mechanics</a></li>
 <li><a href="#CED">Classical Electrodynamics</a><ul>
 <li><a href="#CED1">CED1 - What is the Maxwell stress tensor <span class="math">\(\mathbf{\sigma}\)</span> and how does it work?</a></li>
+<li><a href="#CED2">CED2 - Why is current produced to a wire when moving a magnet close to it?</a></li>
 </ul></li>
 <li><a href="#AM">Analytical Mechanics</a></li>
 <li><a href="#SR">Special Relativity</a><ul>
@@ -144,6 +145,19 @@ Date:   Fri Jul 3 19:12:12 2015 +0200
 <p>This source term encapsulate the passage of momentum from charged matter to fields. So field momentum is not conserved separately, and s represents &quot;generation&quot; of momentum from charges. Fittingly, the equation is now called a continuity equation with sources.</p>
 <p>So the Maxwell stress tensor is just <span class="math">\(\sigma_f \)</span>, the stress tensor for only the electromagnetic field.</p>
 <p>What I've detailed up to now is the physical interpretation in general of the stress tensor in any local theory; classical EM is just the first field theory one usually encounters. The actual form of the tensor for electromagnetism in terms of <span class="math">\(E\)</span> &amp; <span class="math">\(B\)</span> is computed from the Poynting vector and a full derivation is presented in any decent CED textbook.</p>
+<h3 id="CED2">CED2 - Why is current produced to a wire when moving a magnet close to it?</h3>
+<p><em>this answer provided by <a href="https://www.reddit.com/user/Aliudnomen">/u/Aliudnomen</a></em></p>
+<p>harged particles moving in a magnetic field experience a force called the Lorentz force, given by</p>
+<p><span class="math">\[\vec{F}_L = q(\vec v \times \vec B)\]</span></p>
+<p>With <span class="math">\(q\)</span> the charge of the particle. The cross product means that the force is perpendicular to both the velocity (<span class="math">\(\vec v\)</span>) and the magnetic field lines (<span class="math">\(\vec B\)</span>).</p>
+<p>When you move the magnet close to the wire, you're essentially creating <a href="https://tap.iop.org/fields/electromagnetism/414/img_full_46963.gif">this situation</a>, only in this case it's the magnetic field that is 'moving' (actually changing). The movement of the bar PQ in the linked image causes a force on the charged particles inside it, from the right hand rule this force acts from P to Q for positively charged particles and from Q to P for negative ones.</p>
+<p>If we go a little deeper, we find that we can express the force per unit charge as</p>
+<p><span class="math">\[f = \vec{v} \times \vec{B}\]</span></p>
+<p>Taking the line integral of this gives us the electromotive force that the magnetic field exerts on the charges in the wire:</p>
+<p><span class="math">\[\text{emf} = \int_\text{wire} \vec{f} \cdot d\vec{r}\]</span></p>
+<p>This electromotive force acts as a voltage, so you end up getting a current through your wire! The above is nicely summarized in Faraday's Law of Induction, one of Maxwell's famous equations:</p>
+<p><span class="math">\(\nabla \times E = -\frac{\partial B}{\partial t}\)</span></p>
+<p>Read: a changing magnetic field (such as when you move a magnet near a wire) induces an electric field.</p>
 <h2 id="AM">Analytical Mechanics</h2>
 <h2 id="SR">Special Relativity</h2>
 <h3 id="SR1">SR1 - In what sense does <span class="math">\(E=mc^2\)</span>, and what does it mean?</h3>
