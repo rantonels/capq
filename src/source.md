@@ -1,3 +1,5 @@
+All answers are by me ([u/rantonels](reddit.com/u/rantonels)), unless specified otherwise.
+
 Kinematics/General Physics {#KGP}
 --------------------------
 
