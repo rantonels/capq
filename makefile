@@ -18,7 +18,7 @@ index.html:	src/source.md src/preamble.html style/layout.html images/feynman
 tex/capq-booklet.pdf:	src/source.md src/preamble.tex images/feynman
 	pandoc src/source.md \
 		-s --toc \
-		--latex-engine=pdflatex \
+		--latex-engine=xelatex \
 		--include-before-body="src/preamble.tex" \
 		--default-image-extension=pdf \
 		-o tex/capq-booklet.pdf
