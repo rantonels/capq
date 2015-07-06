@@ -282,6 +282,20 @@ Read: a changing magnetic field (such as when you move a magnet near a wire) ind
 Analytical Mechanics {#AM}
 --------------------
 
+### AM1 - Why are $q(t)$ and $\dot q(t)$ treated as indipendent in Lagrangian mechanics? Shouldn't $\dot q(t)$ be viewed as a function(al) of $q(t)$? {#AM1}
+
+*this answer provided by [u/Josef--K](https://www.reddit.com/user/Josef--K)*
+
+For simplicity consider systems of one degree of freedom. Without further specification, all we know is that in general the Lagrangian is a function $$L:\mathbb{R}^3 \rightarrow \mathbb{R}; \;(q,v,t)\mapsto L(q,v,t) $$ As you see, no restrictions are placed on the domain here. The Lagrangian is a multivariable function, where position,velocity and time are \textit{independent mathematical coordinates}.
+
+We continue by defining the action $$S=\int_C L(q,v,t) \,ds$$ as a line integral over some path $C$ through the domain. In general such a path can be parametrized in function of one of the variables, time in this case, as $(q(t),v(t),t)$. The more familiar form of the action appears $$S=\int_{t_1}^{t_2} L(q(t),v(t),t) \,dt$$ From this moment on the position and velocity are considered \textit{no longer independent} coordinates in the context of the action and are just explicit functions of time. The relationship between position and velocity as $v=\dot{q}$ has still not been used though.
+
+We are going to assume that for a motion from $q_1$ to $q_2$ the parametrizations $(q(t),v(t),t)$ that correspond to reality, are given by the paths that result in an extremum in the action $S$. To find this minimum we are going to allow for variations in the position $\delta q(t) $ and in variations of velocity $\delta v(t)$. It is only now that we remember the velocity being the position's time derivative and place the following restriction on the variations in the velocity $$\delta v(t)=\frac{d \delta q(t)}{dt}$$ What follows is a textbook derivation without many subtleties which results in: $$\frac{d}{dt} \frac{\partial{L(q,v,t)}}{\partial v}(q(t),\dot{q}(t),t) = \frac{\partial L(q,v,t)}{\partial q}(q(t),\dot{q}(t),t)$$
+
+What is happening in this equation? The first thing that happens is the Lagrangian being treated as a multivariable function where the variables are independent. The partial derivatives of this function are taken on both sides and only then the parametrization $(q(t),v(t),t)$ that minimizes the action is considered. This makes it possible to take a total time derivative of the left side which results in a differential equation for $q(t)$.
+
+To conclude we summarize that it is only the Lagrangian as a multivariable function that treats position and velocity as time independent. This is also the case for operators that work on the Lagrangian as a multivariable function, for example partial derivatives. In the derivation of the equations of motions, we assume that the variations in the velocities are given by the derivatives of the variations in the positions, which reflects the dependent treatment of the variables in this derivation. 
+
 Special Relativity {#SR}
 ------------------
 
