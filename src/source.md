@@ -693,3 +693,15 @@ Zephir is possibly the most beloved crackpot of the internet. He is famous for h
 ### Imagining the Tenth Dimension / Rob Bryanton
 
 Absolute shit. I'm actually afraid the guy is mentally ill. 
+
+### The Stand-Up Physicists / Doug Sweetser
+
+This person is particularly tricky. He hasn't attracted enough attention to be officially "debunked" by a decent physicist in standard tradition, but he is by all means a crackpot with crackpot proposals. He is fixated with quaternions, and believes they are the road to "a new way to new physics". But besides squaring a quaternion, he is not particularly versed in the physics he'd like to overturn/contribute to. He's specialized in vagueness and violent speculation.
+
+* Me and him have had an "interesting" encounter regarding one of his articles, starts here [https://www.reddit.com/r/Physics/comments/3b60nr/a_new_invariant_in_special_relativity_derived_by/](https://www.reddit.com/r/Physics/comments/3b60nr/a_new_invariant_in_special_relativity_derived_by/) (pay attention to hidden comments).
+
+### Nassim Haramein / Resonance Project / Schwarzschild proton / Haramein-Rauscher metric
+
+Nassim Haramein is *evil*. His specialty is circularity, combined with pointlessness of his evidently incorrect conclusions-hypotheses (he notably blurs the line). The evilness lies in the profit he makes from manufacturing shit.
+
+* a thorough debunking of Nassim: [http://azureworld.blogspot.it/2010/02/nassim-haramein-fraud-or-sage-part-2.html](http://azureworld.blogspot.it/2010/02/nassim-haramein-fraud-or-sage-part-2.html)
