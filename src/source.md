@@ -705,3 +705,27 @@ This person is particularly tricky. He hasn't attracted enough attention to be o
 Nassim Haramein is *evil*. His specialty is circularity, combined with pointlessness of his evidently incorrect conclusions-hypotheses (he notably blurs the line). The evilness lies in the profit he makes from manufacturing shit.
 
 * a thorough debunking of Nassim: [http://azureworld.blogspot.it/2010/02/nassim-haramein-fraud-or-sage-part-2.html](http://azureworld.blogspot.it/2010/02/nassim-haramein-fraud-or-sage-part-2.html)
+
+### An exceptionally simple theory of everything / $E_8$ Theory / Garret Lisi
+
+This theory is a disaster, but nevertheless it is reasonably effective at looking genuine. Lisi is somewhat familiar with particle physics but clearly does not possess the critical thinking necessary to stop himself from throwing particles in representations where they don't fit and violating the Coleman-Mandula theorem (and its SUSY extension). Lisi is behind the popsci animations of the root system of the $E_8$ group with particle sprayed on the vertices rotating in higher dimensions without any specific meaning to it all.
+
+* Luboš Motl has destroyed Lisi's theory in painstaking detail here [http://motls.blogspot.it/2007/11/exceptionally-simple-theory-of.html](http://motls.blogspot.it/2007/11/exceptionally-simple-theory-of.html). The comment section of the article is particularly notable, first of all because Zephir's there. But mostly for this delightful, pictorial review of Garrett Lisi by commnenter Elias Newcomen:	
+
+>Jacob,
+>
+>Let me put Mr Lisi's theory into a software developer's perspective.
+>
+>Imagine you are a top notch programmer at some company, and you were tasked to lead a project with a colleague. You both agree to split the work up and integrate it at some future point.
+>
+>One day you get to a point in your code writing where you need to ask how your colleague approach some particular problem; you go to his office and find multitudes of little tiny stickers of different shapes and colors pasted over his computer monitor, to the point that it would be impossible to see the screen. You later find out that your colleague couldn't even start his computer.
+>
+>I think from this point you can finish the story...
+
+### EM drive / Roger Shawyer / NASA "warp" drive
+
+Wasted too much breath on this bullshit. The community of EM drive enthusiasts combines such a massive amount of diverse ad-hoc grotesque modifications to the methods of science that it becomes impossible to argue anything with them. Be ready to enter a world where the "quantum vacuum virtual plasma" (which is a nonsensical combination of words) produces a Lorentz-violating thrust which is, surprisingly, always just below measurement uncertainty.
+
+EM drivers are, exactly like magnet motorists, devoted to the "experimental method" of rebuilding the magical device in question at home. Of course, if you repeat an experiment where nothing was observed above the noise level at home, you're going to see even less. Or more, if you can't control errors. It doesn't really matter, because independent confirmation is a boring dogma of the oppressive orthodoxy and you're supposed to trust everyone at face value, even if they're just telling you they did measure a microwave oven twitch a little.
+
+* good review: [http://blogs.discovermagazine.com/outthere/2014/08/06/nasa-validate-imposible-space-drive-word/#.VZ5Ev1nSphG](http://blogs.discovermagazine.com/outthere/2014/08/06/nasa-validate-imposible-space-drive-word/#.VZ5Ev1nSphG)

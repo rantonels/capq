@@ -130,7 +130,7 @@ blockquote {
     border-left:.5em solid #eee;
     padding: 0 1em;
     margin-left:0;
-    max-width: 476px;
+    max-width: 700px;
 }
 blockquote  cite {
  /   font-size:14px;
@@ -143,7 +143,7 @@ blockquote cite:before {
 
 blockquote p {  
     color: #666;
-    max-width: 460px;
+    max-width: 650px;
 }
 hr {
 /    width: 540px;
