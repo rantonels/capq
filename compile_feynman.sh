@@ -53,13 +53,4 @@ rm -f src/fdiagrams/*.ps
 rm -f src/fdiagrams/*.1
 
 
-#convert to pdf
-echo "CONVERTO TO PDF..."
-
-SVGS=$(ls images/*.svg)
-for file in $SVGS
-do
-	inkscape $file --export-pdf=images/"`basename $file .svg`.pdf"
-done
-
 echo "FEYNMAN DIAGRAMS DONE."

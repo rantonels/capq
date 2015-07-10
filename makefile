@@ -2,9 +2,11 @@ COMMIT=`git log | head -n 3`
 
 CSS="style/markdown5.css"
 
+IMAGES=images/pluto_types.svg
+
 all: 	index.html tex/capq-booklet.pdf
 
-index.html:	src/source.md src/preamble.html style/layout.html images/feynman
+index.html:	src/source.md src/preamble.html style/layout.html images
 	pandoc src/source.md \
 		--template "style/layout.html" \
 		--include-before-body="src/preamble.html" \
@@ -15,7 +17,7 @@ index.html:	src/source.md src/preamble.html style/layout.html images/feynman
 		--default-image-extension=svg \
 		-o index.html
 
-tex/capq-booklet.pdf:	src/source.md src/preamble.tex images/feynman
+tex/capq-booklet.pdf:	src/source.md src/preamble.tex images/pdf
 	pandoc src/source.md \
 		-s --toc \
 		--latex-engine=xelatex \
@@ -23,14 +25,19 @@ tex/capq-booklet.pdf:	src/source.md src/preamble.tex images/feynman
 		--default-image-extension=pdf \
 		-o tex/capq-booklet.pdf
 
+images: $(IMAGES) images/feynman
+
 images/feynman: src/fdiagrams/diagrams.tex
 	./compile_feynman.sh
 	touch images/feynman
+
+images/pdf: images/feynman images
+	./images_pdf.sh
+	touch images/pdf
 
 clean:
 	rm -f index.html
 	rm -f tex/capq-booklet.pdf
 	rm -f images/*.pdf
-	rm -f images/*.svg
 	rm -f images/feynman
 	

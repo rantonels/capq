@@ -190,6 +190,20 @@ Thermodynamics {#TD}
 Celestial/Orbital Mechanics {#OM}
 ---------------------------
 
+### OM1 - Why won't/didn't New Horizons stop at Pluto and instead had to fly by? {#OM1}
+
+The quick answer is that it is/was going too fast with respect to the dwarf planet and will not even remotely have the power to slow down. But let's look in detail at why that happens and also a bit into what that means.
+
+Assume we are placed at a certain height above the Earth, well outside the atmosphere. Assume the Earth was spherical and homogeneous, the Sun's effect were negligible and that there was no moon (how's that for simplification?). Then we know from Kepler that our possible trajectories are conic sections (ellipses, parabolas, or hyperbolas) with a focus on the Earth. We also know that our velocity is tangent to our trajectory (from standard kinematics). However, there are multiple conic sections with a focus on the Earth, passing through our current position and tangent to our velocity, as the following diagram shows:
+
+![](images/pluto_types)
+
+*exiting and entering a sphere of influence*
+
+*Hohmann transfer*
+
+*Charon*
+
 Fluid Mechanics {#FM}
 ---------------
 
