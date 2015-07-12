@@ -2,7 +2,7 @@ COMMIT=`git log | head -n 3`
 
 CSS="style/markdown5.css"
 
-IMAGES=images/pluto_types.svg
+IMAGES=images/pluto_types.svg images/pluto_scatter.svg
 
 all: 	index.html tex/capq-booklet.pdf
 
