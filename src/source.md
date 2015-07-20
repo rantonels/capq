@@ -166,7 +166,7 @@ or even this
 
 as if the centrifugal force suddenly became taboo. The answer is I don't know: I don't know why people do this. Wikipedia's article is literally named Fictitious Force, and this view was also very likely that of Newton.
 
-Inertial forces are actually pretty real. If I'm riding a merry-go-round, I can measure a force pushing me outwards. If I weigh myself at the equator, I weigh slightly less than at the poles (assuming a spherical uniform Earth). Sure, you can just impose that non-inertial frames are fundamentally inferior to inertial frames and that the correct description of my dynamometer or scale is only that where it's rotating, but it's kind of annoying to call (even indirectly) the most complicated picture the "more correct" one. Still, the question mantains a purely philosophical nature and therefore I don't enjoy speculating on it.
+Inertial forces are actually pretty real. If I'm riding a merry-go-round, I can measure a force pushing me outwards. If I weigh myself at the equator, I weigh slightly less than at the poles. Sure, you can just impose that non-inertial frames are fundamentally inferior to inertial frames and that the correct description of my dynamometer or scale is only that where it's rotating, but it's kind of annoying to call (even indirectly) the most complicated picture the "more correct" one. Still, the question mantains a purely philosophical nature and therefore I don't enjoy speculating on it.
 
 Here's a pre-packaged answer if your professor asks you wheter a centrifugal or centripetal force is acting on a rotating object (which is an absolutely legitimate question to be anal about):
 
