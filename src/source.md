@@ -11,7 +11,7 @@ The metre and the second are arbitrary units that originally referred in their d
 
 As soon as the necessary physics was consolidated, these definitions were replaced with the modern ones:
 
-1) The second is $9\,192\,631\,770$ times the period of the radiation emitted in a specific atomic transition of ${}^{133}Cs$.
+1) The second is $9\,192\,631\,770$ times the period of the radiation emitted in a specific atomic transition of ${}^{133}$Cs.
 
 2) The metre is the length travelled by light in vacuum in $1/299 \, 792 \, 458$ of a second.
 
