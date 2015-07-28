@@ -17,9 +17,9 @@
 </head>
 <body>
 <div class="version">
-commit 85288a3e7b6b5378f817a15bb94113cadced1e22
-Merge: 3240e5d 59874d4
+commit 8af76f9d17720dafd895e5295f9aafc690abb73c
 Author: Riccardo Antonelli <riccardo.antonelli@hotmail.it>
+Date:   Mon Jul 20 11:53:21 2015 +0200
 </div>
 <h2 class="pretitle">the handy booklet of</h2>
 <h1 class="bigtitle">Constantly Asked <br>Physics Questions</h1>
@@ -48,6 +48,7 @@ Author: Riccardo Antonelli <riccardo.antonelli@hotmail.it>
 </ul></li>
 <li><a href="#CM">Classical Mechanics</a><ul>
 <li><a href="#CM1">CM1 - Why is my physics teacher so anal about centripetal vs centrifugal? Is the centrifugal force &quot;fictitious&quot;?</a></li>
+<li><a href="#CM2">CM2 - What would happen if you were struck by a primordial (<span class="math">\(10^{14} \; \mathrm{kg}\)</span>) black hole at orbital speed (<span class="math">\(8 \, \mathrm{km}/\mathrm{s}\)</span>)?</a></li>
 </ul></li>
 <li><a href="#TD">Thermodynamics</a></li>
 <li><a href="#OM">Celestial/Orbital Mechanics</a><ul>
@@ -191,6 +192,41 @@ Author: Riccardo Antonelli <riccardo.antonelli@hotmail.it>
 <p>For example, gravity can (by virtue of the equivalence principle and general relativity) be cancelled locally by a suitable change of coordinates. If you are standing on the surface of the Earth, a local change to free-falling coordinates cancels the gravitational force; it's instead the ground that is accelerating upwards at <span class="math">\(g\)</span> and pushing on you, accelerating you upwards. A free-falling object, instead, feels no force in this (local) frame. The sacred &quot;lab frame&quot; where stuff falls at <span class="math">\(g\)</span> is actually <em>non-inertial</em>, and the force of gravity is the inertial force associated with the non-inertiality of that frame! This is the fundamental starting point of general relativity. And in general relativity, sometimes spacetime is curved, and <em>inertial frames do not exist</em>. A worldview obsessed with separating the &quot;real&quot; forces from the &quot;fake&quot; forces is in some serious difficulty.</p>
 <p>But what's even more interesting (and less known) is that the other fundamental forces (electroweak and strong) act in a similar fashion. They are &quot;inertial&quot; forces due to the &quot;non-inertiality&quot; of some &quot;frame&quot; and can be locally cancelled by a suitable local &quot;change of coordinates&quot;. I put stuff in quotes because this actually involves coordinate transformations in some &quot;internal&quot; space instead of spacetime, but the math (gauge theory) is almost identical.</p>
 <p>Note that the electromagnetic force is at the base of the microscopical description of the tension force holding the mass in circular motion, the centripetal force. So, no pun intended, we've come full circle.</p>
+<h3 id="CM2">CM2 - What would happen if you were struck by a primordial (<span class="math">\(10^{14} \; \mathrm{kg}\)</span>) black hole at orbital speed (<span class="math">\(8 \, \mathrm{km}/\mathrm{s}\)</span>)?</h3>
+<p>Ok, there is no way this is a <em>commonly</em> asked question. But it <a href="https://www.reddit.com/r/AskPhysics/comments/3eh0zv/if_a_small_1014kg_primordial_black_hole_flew/cthmc80">was</a> asked, and I feel my answer touches involuntarily on some really interesting points I want an occasion to talk about; in particular a couple of things about divergent integrals.</p>
+<p>And why is in the Classical Mechanics sections? Isn't a black hole a fully general-relativistic object? Well, yes, but it only seriously is at distances less than 20-30 the Schwarzschild radius, but for our particular black hole that's</p>
+<p><span class="math">\[ r_S = \frac{GM}{c^2} \sim 1.5 \cdot 10^{-13} \, \mathrm{m} \]</span></p>
+<p>which is much less than the Bohr radius, which is about half an ångström (an ångström is <span class="math">\(10^{-10} \mathrm{m}\)</span>). So atoms are definitely much larger than the <span class="math">\(r_S\)</span> and we can hope little to no stuff of any kind gets that close to the black hole. Effectively, the black hole is an absolutely Newtonian point mass.</p>
+<p>The most obvious effect of the passage of the black hole is that it imparts an acceleration on mass elements of the human body. Let us consider the <span class="math">\(\Delta v\)</span> imparted on an atom of the body a distance <span class="math">\(b\)</span> (the impact parameter) from the trajectory of the black hole.</p>
+<div class="figure">
+<img src="images/davinci.svg" alt="One of da Vinci&#39;s famous studies on black hole-human torso scattering." /><p class="caption">One of da Vinci's famous studies on black hole-human torso scattering.</p>
+</div>
+<p>Let's take a coordinate <span class="math">\(x\)</span> along the trajectory (with <span class="math">\(x= 0\)</span> when the BH passes at the closest point from the atom) and <span class="math">\(y\)</span> along the perpendicular.</p>
+<p>The total <span class="math">\(\Delta v_x\)</span> is obviously zero (or almost zero), while the differential <span class="math">\(\Delta v_y\)</span> is</p>
+<p><span class="math">\[ dv_y= \frac{GM}{r^2} \frac{b}{r} dt = \frac{GM}{v_o} \frac{b}{(b^2+x^2)^{3/2}} dx \]</span></p>
+<p>where <span class="math">\(v_0\)</span> is the velocity of the black hole. Here I'm using nonrelativistic mechanics + ignoring the motion of the accelerated atom during the transit of the BH. These are actually not good approximations for very small <span class="math">\(b\)</span> but they'll do.</p>
+<p>Since most of the contribution to the integral is from around <span class="math">\(x=0\)</span>, there is no harm in integrating from minus to plus infinity, instead of just along the length of the body; it's a really good approximation. So, using the integral:</p>
+<p><span class="math">\[ \int_{-\infty}^\infty d\xi \frac{1}{(1+\xi^2)^{3/2}}  = 2 \]</span></p>
+<p>we get</p>
+<p><span class="math">\[ \Delta v = \frac{2GM}{v_0} \frac{1}{b} =: K \frac{1}{b} \]</span></p>
+<p>the constant is <span class="math">\(K \sim 1.6 \mathrm{m}^2/\mathrm{s}\)</span>. So the imparted speed is inversely proportional both to the impact parameter, and to the velocity <span class="math">\(v_0\)</span>, at least in the nonrelativistic regime. The speed is equal to the speed of light around <span class="math">\(5 \, \mathrm{nm}\)</span>, so that means that this formula is right up to around the <span class="math">\(50 \mathrm{nm}\)</span> scale, and unaccurate at smaller distances, where relativity is important.</p>
+<p>This speed is not gigantic for mm-distant atoms. <em>But</em>:</p>
+<p>The energy imparted on the atom is</p>
+<p><span class="math">\(E = \frac{1}{2} m K^2 \frac{1}{b} \)</span></p>
+<p>and it's no big deal to use this formula as a good order-of-magnitude estimate also in the relativistic small-<span class="math">\(b\)</span> regime. I use as <span class="math">\(m\)</span> the oxygen atom mass. At one nanometre distance the energy is around</p>
+<p><span class="math">\[ E_{1 \mathrm{nm}} \sim 230 \mathrm{GeV} \]</span></p>
+<p>which is pretty large, absolutely relativistic in fact. (The rest energy of Oxygen, by comparison, is <span class="math">\(\sim 15 \mathrm{GeV}\)</span>). Now let's compute the total energy. I estimate the volumetric atomic number density of the human body by assuming it's mostly made of oxygen and I get <span class="math">\(n \sim 4 \cdot 10^{28} m^{-3}\)</span>. Then the total given energy, approximating a human as a very unlucky cilinder of oxygen 1 meter thick and 1 meter radius:</p>
+<p><span class="math">\[ E_T = \int_\text{assume a cylindrical human} dV \,n \,E(b)  = \frac{nmK^2}{2} \int_\epsilon^R L \, 2\pi b \,db \, \frac{1}{b^2} \]</span></p>
+<p>I've used cilindrical coordinates centered on the trajectory. I cannot integrate the impact parameter to 0 because that would make the integral divergent. However, we have a physical cutoff: under the ångström scale the material is not uniform. No atoms will in general be closer to the black hole than an ångström; the spacing itself between atoms is surely larger than the atoms themselves. So we set <span class="math">\(\epsilon = 1 \overset{\circ}{A} \)</span>. This is justified because the integral is only logarithmically divergent:</p>
+<p><span class="math">\[ E_T = \pi L n m K^2 \,\ln \left(\frac{1 \mathrm{m}}{1 \overset{\circ}{A}}\right) \]</span></p>
+<p>and the logarithm is around 23. If the divergence was not logarithmic, our integral would be strongly dependent on <span class="math">\(\epsilon\)</span> and it would have been impossible to make useful predictions; moreover the energy would have been probably huge. Instead the integral depends weakly on our definition of <span class="math">\(\epsilon\)</span>, and the energy is quite modest:</p>
+<p><span class="math">\[ E_T = (1 \,\mathrm{m})\pi n m K^2 \cdot 23 \sim 34 \;\mathrm{kJ}\]</span></p>
+<p>which is around the muzzle energy of <a href="https://en.wikipedia.org/wiki/14.5%C3%97114mm">these particular soviet heavy machine gun bullets</a>. So the kinetic energy imparted to you by the BH is more or less what it would need to absorb to stop one of those bullets. So, definitely big enough to injure you, but possibly you could survive... I cannot tell.</p>
+<p>The size of the hole (the one in your body, not the black hole) itself should be around one or two millimetres. Or maybe a centimetre, I have no idea.</p>
+<p>Apart from the large number of approximations, there are a few problems with the above reasoning, and both refer to the relativistic atoms.</p>
+<p>First of all, very energetic, relativistic charged particles interact <em>very little</em> with matter. That's a counter-intuitive result of the relativistic Bethe Bloch formula. A nonrelativistic atom has most or all of its energy absorbed by the body while travelling through it, while relativistic atoms mostly slip away unimpeded. So to compute the total heating we should rather exclude the relativistic atoms, this amounts to a change in <span class="math">\(\epsilon\)</span> above to cutoff at the scale where they start being relativistic. However, since the formula depends logarithmically on <span class="math">\(\epsilon\)</span>, this would change very little. It's gonna be tens of thousands of Joules anyway.</p>
+<p>The second is that I'm only computing the total energy and trying to assess damages this way. However we have to understand that also the energy imparted by a single atom can have medical consequences. In fact, the high-energy atoms are radiation and take into account the amount of radiation poisoning. I haven't done this, but you can expect a results ranging from a light exposure to a full-scale tumour farm. This is the great difference between our primordial BH and a conventional orbital speed debris.</p>
+<p>Third: I have excluded that the nuclei or electrons can actually reach the black hole. It's not clear exactly what would happen - the de Broglie wavelength of the electron is larger than the Schwarzschild radius of the black hole, so we're touching on semiclassical gravity - but you can bet it's gonna be similar to what happens when matter falls into a full-scale black hole: loud and bright. That could be another way this unfortunate occurrence could make you suffer.</p>
 <h2 id="TD">Thermodynamics</h2>
 <h2 id="OM">Celestial/Orbital Mechanics</h2>
 <h3 id="OM1">OM1 - How do gravity assists/slingshots work?</h3>
