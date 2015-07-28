@@ -190,7 +190,7 @@ Ok, there is no way this is a *commonly* asked question. But it [was](https://ww
 
 And why is in the Classical Mechanics sections? Isn't a black hole a fully general-relativistic object? Well, yes, but it only seriously is at distances less than 20-30 the Schwarzschild radius, but for our particular black hole that's
 
-$$ r_S = \frac{GM}{c^2} \sim 1.5 \cdot 10^{-13} \, \mathrm{m} $$
+$$ r_S = \frac{2GM}{c^2} \sim 1.5 \cdot 10^{-13} \, \mathrm{m} $$
 
 which is much less than the Bohr radius, which is about half an ångström (an ångström is $10^{-10} \mathrm{m}$). So atoms are definitely much larger than the $r_S$ and we can hope little to no stuff of any kind gets that close to the black hole. Effectively, the black hole is an absolutely Newtonian point mass.
 
