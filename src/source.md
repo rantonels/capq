@@ -250,6 +250,16 @@ The second is that I'm only computing the total energy and trying to assess dama
 
 Third: I have excluded that the nuclei or electrons can actually reach the black hole. It's not clear exactly what would happen - the de Broglie wavelength of the electron is larger than the Schwarzschild radius of the black hole, so we're touching on semiclassical gravity - but you can bet it's gonna be similar to what happens when matter falls into a full-scale black hole: loud and bright. That could be another way this unfortunate occurrence could make you suffer.
 
+We're forgetting about a peculiar property of small black holes: they emit significant Hawking radiation! Our black hole is pretty hot, at a Hawking temperature of (all formulas from [Wikipedia](https://en.wikipedia.org/wiki/Hawking_radiation#Black_hole_evaporation)):
+
+$$ T = \frac{\hbar c^3}{8\pi G M k_B} = 1.22 \cdot 10^9 \; \mathrm{K} $$
+
+so, pretty hot. But it has a very small event horizon from which it radiates, so the total power is
+
+$$ P = \frac{\hbar c^6}{15360 \pi G^2 M^2} = 35.6 \mathrm{kW} $$
+
+That looks serious, but in the short ecounter lasting $t= \left( 1 \mathrm{m} \right)/\left(8 \mathrm{km}/\mathrm{s}\right)$ the total energy radiated into the body (granted, in powerful gamma rays) is $4.45 J$, much less than the kinetic energy computed above. But possibly more carcinogenic.
+
 Thermodynamics {#TD}
 --------------
 

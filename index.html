@@ -17,9 +17,9 @@
 </head>
 <body>
 <div class="version">
-commit 7afefb0793432929a980b0939fcc47e1af4afcdd
+commit f1fbb8f1ee56bc92b45c7545e53cc0fe2e9285a8
 Author: Riccardo Antonelli <riccardo.antonelli@hotmail.it>
-Date:   Tue Jul 28 13:54:06 2015 +0200
+Date:   Tue Jul 28 13:58:26 2015 +0200
 </div>
 <h2 class="pretitle">the handy booklet of</h2>
 <h1 class="bigtitle">Constantly Asked <br>Physics Questions</h1>
@@ -227,6 +227,11 @@ Date:   Tue Jul 28 13:54:06 2015 +0200
 <p>First of all, very energetic, relativistic charged particles interact <em>very little</em> with matter. That's a counter-intuitive result of the relativistic Bethe Bloch formula. A nonrelativistic atom has most or all of its energy absorbed by the body while travelling through it, while relativistic atoms mostly slip away unimpeded. So to compute the total heating we should rather exclude the relativistic atoms, this amounts to a change in <span class="math">\(\epsilon\)</span> above to cutoff at the scale where they start being relativistic. However, since the formula depends logarithmically on <span class="math">\(\epsilon\)</span>, this would change very little. It's gonna be tens of thousands of Joules anyway.</p>
 <p>The second is that I'm only computing the total energy and trying to assess damages this way. However we have to understand that also the energy imparted by a single atom can have medical consequences. In fact, the high-energy atoms are radiation and take into account the amount of radiation poisoning. I haven't done this, but you can expect a results ranging from a light exposure to a full-scale tumour farm. This is the great difference between our primordial BH and a conventional orbital speed debris.</p>
 <p>Third: I have excluded that the nuclei or electrons can actually reach the black hole. It's not clear exactly what would happen - the de Broglie wavelength of the electron is larger than the Schwarzschild radius of the black hole, so we're touching on semiclassical gravity - but you can bet it's gonna be similar to what happens when matter falls into a full-scale black hole: loud and bright. That could be another way this unfortunate occurrence could make you suffer.</p>
+<p>We're forgetting about a peculiar property of small black holes: they emit significant Hawking radiation! Our black hole is pretty hot, at a Hawking temperature of (all formulas from <a href="https://en.wikipedia.org/wiki/Hawking_radiation#Black_hole_evaporation">Wikipedia</a>):</p>
+<p><span class="math">\[ T = \frac{\hbar c^3}{8\pi G M k_B} = 1.22 \cdot 10^9 \; \mathrm{K} \]</span></p>
+<p>so, pretty hot. But it has a very small event horizon from which it radiates, so the total power is</p>
+<p><span class="math">\[ P = \frac{\hbar c^6}{15360 \pi G^2 M^2} = 35.6 \mathrm{kW} \]</span></p>
+<p>That looks serious, but in the short ecounter lasting <span class="math">\(t= \left( 1 \mathrm{m} \right)/\left(8 \mathrm{km}/\mathrm{s}\right)\)</span> the total energy radiated into the body (granted, in powerful gamma rays) is <span class="math">\(4.45 J\)</span>, much less than the kinetic energy computed above. But possibly more carcinogenic.</p>
 <h2 id="TD">Thermodynamics</h2>
 <h2 id="OM">Celestial/Orbital Mechanics</h2>
 <h3 id="OM1">OM1 - How do gravity assists/slingshots work?</h3>
