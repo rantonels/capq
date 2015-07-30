@@ -1,6 +1,6 @@
 COMMIT=`git log | head -n 3`
 
-CSS="style/markdown5.css"
+CSS="style/style.css"
 
 IMAGES=images/pluto_types.svg images/pluto_scatter.svg
 
