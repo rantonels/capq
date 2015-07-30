@@ -6,9 +6,10 @@ IMAGES=images/pluto_types.svg images/pluto_scatter.svg
 
 all: 	index.html tex/capq-booklet.pdf
 
-index.html:	src/source.md src/preamble.html style/layout.html images
+index.html:	src/source.md src/preamble.html style/layout.html images style/header.html
 	pandoc src/source.md \
 		--template "style/layout.html" \
+		--include-in-header="style/header.html" \
 		--include-before-body="src/preamble.html" \
 		--css $(CSS) \
 		-s --toc \
