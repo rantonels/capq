@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>CAPQ - </title>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../style/style.css">
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+<div class="col-md-12">
+	<h2 class="text-center">CAPQ - <a href="../">back to index</a></h1>
+
+</div>
+
+
+
+<div class="container">
+	<div class="col-md-12">
+
+
+		<h1 id="hep2---why-do-photons-not-acquire-a-mass-through-the-higgs-mechanism">HEP2 - Why do photons not acquire a mass through the Higgs mechanism?</h1>
+<p>By definition!</p>
+<p>Photons are by definition the single component of the original <span class="math">\(SU(2)\times U(1)\)</span> electroweak gauge field that leaves the Higgs vacuum expectation value invariant. This means that the VEV is uncharged for the photon, and the photon aquires no mass.</p>
+<p>A little simpler: basically, <span class="math">\(SU(2)\times U(1)\)</span> is a four dimensional group of transformation. The Higgs is a field which takes value in a four-dimensional (two-complex dimensional) vector space and which is transformed (&quot;rotated&quot;) by these transformations. Now after electroweak symmetry breaking the Higgs aquires a VEV, which just mean that in all of space it assumes the value of a specific vector in that 4-dimensional space. This vector is not invariant under the original gauge group, this means that it breaks the symmetry. There is however a 1-dimensional subgroup of the gauge group that still leaves the VEV invariant and thus that symmetry remains unbroken. That group's generator is defined to be the photon and the preserved gauge symmetry assures the photon has no mass. The other three generators instead do interact with the VEV and acquire mass. They are decomposed in three orthogonal generators by electric charge: <span class="math">\(W^+\)</span>, <span class="math">\(W^-\)</span>, <span class="math">\(Z^0\)</span>.</p>
+<p>And now, more detailed: assume WLOG that the Higgs has VEV as such:</p>
+<p><span class="math">\[ \phi = \begin{pmatrix} 0 \\ \phi_0 \end{pmatrix} \]</span></p>
+<p>with <span class="math">\(\phi_0\)</span> real, and the generic gauge group element acts on <span class="math">\(\phi\)</span> as</p>
+<p><span class="math">\[ \phi \rightarrow \exp\left(i \left(\frac{g&#39;}{2} B \cdot \mathbb{1} + g W_1 T^1 + g W_2 T^2 + g W_3 T^3\right) \right) \phi\]</span></p>
+<p>Where <span class="math">\(B\)</span> and <span class="math">\(W_i\)</span> are respectively the gauge field for weak hypercharge (<span class="math">\(U(1)\)</span>) and weak isospin (<span class="math">\(SU(2)\)</span>), <span class="math">\(T^i= \frac{\sigma^i}{2}\)</span> are generators for <span class="math">\(SU(2)\)</span>, and <span class="math">\(g\)</span>, <span class="math">\(g&#39;\)</span> are the corresponding coupling constants.</p>
+<p>We impose <span class="math">\(\phi&#39; = \phi\)</span> to find the little group of the VEV (the isotropy group). For infinitesimal generators, the above reduces to:</p>
+<p><span class="math">\[ \begin{pmatrix} g&#39;B + g W_3 &amp;  g (W_1 + i W_2) \\ g (W_1 - i W_2) &amp; g&#39;B - g W_3 \end{pmatrix} \begin{pmatrix} 0 \\ \phi_0  \end{pmatrix} = 0 \]</span></p>
+<p>This gives immediately <span class="math">\(W_1 = W_2 = 0\)</span> (as they are real generators) and <span class="math">\(g&#39;B - g W_3 = 0\)</span>; this means that the generator <span class="math">\(A = \frac{1}{\sqrt{g&#39;^2+g^2}} (g&#39; W_3 + g B)\)</span> solution to the latter two equations generates the one-dimensional isotropy group. This generator is the photon.</p>
+<p>The other three generators do modify the value of the Higgs and are orthogonalized into the <span class="math">\(W^{\pm} = \frac{1}{\sqrt 2} (W_1 \pm i W_2) \)</span> and <span class="math">\(Z^0 =  \frac{1}{g^2+g&#39;^2} (g W_3 - g&#39; B) \)</span>.</p>
+<p>The mass generation is evidenced by expanding the kinetic term of the Higgs Lagrangian around the VEV. This gives a mass term for the gauge boson which is precisely the norm squared of <span class="math">\(\left(\frac{g&#39;}{2} B \cdot \mathbb{1} + g W_i T^i \right) \begin{pmatrix}0\\ \phi_0 \end{pmatrix} \)</span>. Therefore the orthonormal states <span class="math">\(A\)</span>, <span class="math">\(W^{\pm}\)</span>, <span class="math">\(Z^0\)</span> above diagonalize the mass matrix, and <span class="math">\(A\)</span> is the single one with eigenvalue <span class="math">\(0\)</span>, as was shown before.</p>
+
+			</div>
+</div>
+</body>
+</html>

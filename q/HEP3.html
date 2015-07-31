@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>CAPQ - </title>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../style/style.css">
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+<div class="col-md-12">
+	<h2 class="text-center">CAPQ - <a href="../">back to index</a></h1>
+
+</div>
+
+
+
+<div class="container">
+	<div class="col-md-12">
+
+
+		<h1 id="hep3---why-do-photons-not-acquire-a-mass-through-quantum-correctionsinteraction-with-virtual-particles-what-is-charge-renormalization">HEP3 - Why do photons not acquire a mass through quantum corrections/interaction with virtual particles? What is charge renormalization?</h1>
+<p>The short answer is that quantum corrections to the photon propagator do not give it a mass because of the Ward identity, which is a consequence of gauge invariance.</p>
+<p>The probability amplitude for a photon to go from point A to point B is given by what is called the propagator. The &quot;bare&quot; propagator is given by the following expression:</p>
+<p><img src="../images/bare.svg" title="bare" /> <span class="math">\(= \pi^{\mu\nu}(q) = \frac{-ig^{\mu\nu} }{q^2 + i\epsilon} \)</span></p>
+<p>where <span class="math">\(q\)</span> is the four-momentum of the photon and <span class="math">\(\epsilon\)</span> is a funny thing you shouldn't worry about. In fact, put it to 0. This is how a massless propagator should look. The mass of the particle is given by where the propagator is singular (has a pole), so in this case <span class="math">\(q^2 = m^2 = 0\)</span>. (If the photon was massive, in the denominator we would have <span class="math">\(q^2-m_\gamma^2 + i \epsilon\)</span>). The propagator has two Lorentz indices <span class="math">\(\mu\)</span> and <span class="math">\(\nu\)</span> because the photon has a polarization. To get the probability amplitude, you actually have to contract the indices of the propagator with your desired polarization <span class="math">\(\varepsilon_\mu\)</span></p>
+<p>But this is just the bare propagator, this is all tree-level. We want to compute what happens to the propagator when we include higher-order corrections. More practically: the fact that a photon can produce a virtual electron-positron pair, which then reannihilate into a photon, as such:</p>
+<div class="figure">
+<img src="../images/one-floop.svg" title="one-loop" />
+</div>
+<p><em>should</em> affect the probability of the photon going from point A to point B. In fact, when summing over all possible diagrams for the <span class="math">\(\gamma\rightarrow \gamma\)</span> process:</p>
+<p><span class="math">\(\Pi(q) = \)</span> <img src="../images/dressed.svg" title="dressed" /> <span class="math">\(=\)</span> <img src="../images/bare.svg" /> <span class="math">\(+\)</span> <img src="../images/one-floop.svg" /> <span class="math">\(+\)</span> <img src="../images/bibubble.svg" /> <span class="math">\(+\)</span> <img src="../images/twobubble.svg" /> <span class="math">\(+ \ldots\)</span></p>
+<p>we should get the &quot;dressed&quot;, or physical propagator <span class="math">\(\Pi^{\mu\nu}\)</span>. (A quick review of Feynman diagrams: time goes from left to right, wavy lines are photons, solid lines going right are electrons, left are positrons). Now we want to rearrange the terms of the previous series. Call a diagram one-particle-irreducible (1PI) if you cannot split it in two by cutting one of the internal lines (the two wavy lines at the beginning and end don't count). For example, the following diagrams are respectively 1PI and not 1PI.</p>
+<p><img src="../images/yesp.svg" />, <img src="../images/twobubble.svg" /></p>
+<p>Now consider the sum of all 1PI diagrams in the original series, and denote it as:</p>
+<p><span class="math">\(S = \)</span> <img src="../images/onepee.svg" /></p>
+<p>My claim is that the full series of all diagrams for the photon propagator is equal to:</p>
+<p><img src="../images/dressed.svg" /> <span class="math">\(=\)</span> <img src="../images/bare.svg" /> <span class="math">\(+\)</span> <img src="../images/onepee.svg" /> <span class="math">\(+\)</span> <img src="../images/twopee.svg" /> <span class="math">\(+\)</span> <img src="../images/threepee.svg" /> <span class="math">\(+ \ldots\)</span></p>
+<p>This is actually really simple. Think about it.</p>
+<p>So, remembering that concatenating Feynman diagrams means we have to multiply them, we get the geometric series:</p>
+<p><span class="math">\[ \Pi = \pi + \pi S \pi  + \pi S \pi S \pi + \pi S \pi S \pi S \pi + \ldots =  \pi\left( 1 + S\pi + (S\pi)^2 + (S\pi)^3 + \ldots \right)  \]</span></p>
+<p>except these are matrices (with <span class="math">\(\mu\)</span> and <span class="math">\(\nu\)</span> indices), so we have to fix that before summing the geometric series. Here we introduce the fundamental Ward identity. If you have any process in which a photon is one of the external lines (incoming or outgoing particles), then the probability amplitude <span class="math">\(\mathcal{M}\)</span> satisfies</p>
+<p><span class="math">\[ \mathcal{M}^\mu q_\mu = 0\]</span></p>
+<p>where <span class="math">\(q_\mu\)</span> is the momentum of the photon.</p>
+<p>Our 1PI propagator <span class="math">\(S^{\mu\nu}(q)\)</span> should satisfy the Ward identity. It must therefore be proportional to the projector on the subspace orthogonal to <span class="math">\(q_\mu\)</span>. It's not hard to convince oneself that this is given by</p>
+<p><span class="math">\[ S^{\mu\nu}(q) = (q^2 g^{\mu\nu} - q^\mu q^\nu) \Phi(q^2) = \Delta^{\mu\nu}(q) \Phi(q^2) \]</span></p>
+<p>Where <span class="math">\(\Phi(q^2)\)</span> is some scalar function (we also have used that the propagator must be Lorentz-invariant). Since <span class="math">\(\Delta\)</span> is a projector, <span class="math">\(\Delta^2 = \Delta\)</span> (in the sense of matrices). Moreover, also the product <span class="math">\(\Delta&#39; = \Delta \pi\)</span> is a projector, as you can readily compute. We return to our series:</p>
+<p><span class="math">\[ \Pi(q) = \pi\left(1 + \Delta&#39; \Phi + \Delta&#39; \Phi^2 + \Delta&#39; \Phi^3 + \ldots \right) = \pi + \pi\left(\Delta&#39; \left( \frac{1}{1-\Phi(q)} - 1\right) \right) \]</span></p>
+<p>So, finally</p>
+<p><span class="math">\[ \Pi^{\mu\nu}(q) = \frac{-i}{q^2(1-\Phi(q^2))} \left(g^{\mu\nu} - \frac{q^\mu q^\nu}{q^2}\right) + \frac{-i}{q^2} \left( \frac{q^\mu q^\nu}{q^2} \right) \]</span></p>
+<p>Now, we can just drop all terms with <span class="math">\(q_\mu q_\nu\)</span>, because the Ward identity tells us they will not contribute to the scattering amplitude (the Ward identity is just telling us that the longitudinal polarization of the photon is unphysical). Our final expression for the dressed propagator is</p>
+<p><span class="math">\[ \Pi^{\mu\nu} = \frac{ -i g^{\mu\nu} } {q^2 (1-\Phi(q^2)) } \]</span></p>
+<p>which is identical to our original bare propagator <span class="math">\(\pi\)</span>, just multiplied by the function <span class="math">\((1-\Phi(q^2))^{-1}\)</span>. Remembering what we said about poles and masses, for the photon mass to be preserved we would need that this function does not cancel the pole at <span class="math">\(q^2 = 0\)</span> of <span class="math">\(\pi\)</span>. The cancellation would need <span class="math">\(\Phi(q^2)\)</span> to have itself a second-order pole at <span class="math">\(q^2 = 0\)</span>, but this would seem impossible. However, it is absolutely not obvious, and in fact it is false in 2 spacetime dimensions. In the Schwinger model, in 2D, <span class="math">\(\Phi(0)\)</span> has a pole canceling <span class="math">\(q^2\)</span> and the photon mass is shifted to a finite value.</p>
+<p>But our world is luckily higher-dimensional and the photon is safe from mass renormalization.</p>
+<p>However, the propagator still acquires a global multiplicative factor</p>
+<p><span class="math">\[ Z_3 := \frac{1}{1-\Pi(q^2)} \]</span></p>
+<p>Since the photon propagator connects two interaction vertices, and these bring each a power of the fundamental charge <span class="math">\(e\)</span>, the quantum correction to the photon propagators is making the electromagnetic interaction stronger. In particular, for each photon line there are two vertices and one factor of <span class="math">\(Z_3\)</span>, so</p>
+<p><span class="math">\[ e^2 \rightarrow Z_3 e^2 \]</span></p>
+<p>which basically mean we could understand this shift as <span class="math">\(e \rightarrow \sqrt{Z_3} e\)</span>. This is why the procedure we performed above is called charge renormalization. We just derived the well-known fact that the strength of the EM interaction depends on the four-momenta involved.</p>
+<p>To derive exactly that <span class="math">\(\Phi\)</span> has no unwanted pole and how exactly <span class="math">\(e(q^2)\)</span> runs with energy we would need to compute <span class="math">\(\Phi\)</span> explicitly (with some clever regularization, since it's divergent) and I don't want to do that. For that, refer to any good QFT/QED textbook.</p>
+
+			</div>
+</div>
+</body>
+</html>

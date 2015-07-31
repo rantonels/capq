@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>CAPQ - </title>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../style/style.css">
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+<div class="col-md-12">
+	<h2 class="text-center">CAPQ - <a href="../">back to index</a></h1>
+
+</div>
+
+
+
+<div class="container">
+	<div class="col-md-12">
+
+
+		<h1 id="sr2---if-photons-are-massless-how-can-emc2">SR2 - if photons are massless, how can <span class="math">\(E=mc^2\)</span>?</h1>
+<p>Read <a href="SR1.html">SR1</a>.</p>
+<p>The formulas in SR1 are singular if <span class="math">\(v=c\)</span>, which is certainly the case for a photon, a quantum of light. We need to rewrite them by getting rid of the velocity. (Or take a careful limit. That's a nice alternative. But we won't do that).</p>
+<p>In classical mechanics, this is already done when switching from the Lagrangian to the Hamiltonian. You want to write <span class="math">\(E(v)\)</span> in function of <span class="math">\(p(v)\)</span>. So you invert <span class="math">\(p(v)\)</span> as <span class="math">\(v(p)\)</span> and then substitute <span class="math">\(E(v(p))\)</span>. Easier done than said:</p>
+<p><span class="math">\[ p_N = mv  \Rightarrow\]</span> <span class="math">\[ v = \frac{p_N}{m} \]</span> <span class="math">\[ E_N(v) = \frac{1}{2} m v^2 \Rightarrow E_N(p) = \frac{p_N^2}{2m} \]</span></p>
+<p>Which you'll recognize as a standard kinetic Hamiltonian if you're into Hamiltonian mechanics and you'll ignore this sentence if you don't.</p>
+<p>We can do the same with the relativistic case. But first, a neat fact about <span class="math">\(\beta\)</span> and <span class="math">\(\gamma\)</span>:</p>
+<p><span class="math">\[\gamma^2 - (\beta \gamma)^2 = 1\]</span></p>
+<p>try it. It's very boring, but it's true. (It's cool because it implies that if <span class="math">\(\gamma = \cosh(\eta)\)</span>, then <span class="math">\(\sinh(\eta) = \beta \gamma\)</span> and <span class="math">\(\tanh(\eta)=\beta\)</span> and if you don't think hyperbolic functions are the shit then I don't know what to tell you).</p>
+<p>So, we write</p>
+<p><span class="math">\[ \gamma = \sqrt{1+(\beta\gamma)^2} \]</span> <span class="math">\[ E = \gamma m c^2 = \sqrt{1+(\beta\gamma)^2} m c^2 \]</span> <span class="math">\[ =  \sqrt{ (mc^2)^2 + (\beta\gamma m c^2)^2} \]</span> <span class="math">\[ = \sqrt{ (mc^2)^2 + (pc)^2 } \]</span></p>
+<p>So this is our <span class="math">\(E(p)\)</span>, the so-called &quot;full expression&quot; for the mechanical energy of a relativistic body.</p>
+<p>(If you Taylor-expand <span class="math">\(E(p)\)</span> around <span class="math">\(p=0\)</span>, you get <span class="math">\(E = mc^2 + \frac{p^2}{2m} + \ldots\;\)</span>. Go figure.)</p>
+<p>Ok, so we've gotten rid of the gammas and betas. Just a last thing about them! The speed of an object is always recoverable from the energy and momentum:</p>
+<p><span class="math">\[\frac{p}{E} c^2 = \frac{\beta \gamma m c}{\gamma m c^2} c^2 = \beta c = v \]</span></p>
+<p>And only now that we have built this architecture we plug in <span class="math">\(m=0\)</span> to find about massless particles. We get</p>
+<p><span class="math">\[ E = pc \]</span></p>
+<p>and</p>
+<p><span class="math">\[ v = c, \quad \gamma = \infty\]</span></p>
+<p>So massless particles move always at the speed of light and have energy proportional to their momentum. In the limit where the momentum goes to zero, <span class="math">\(p\rightarrow 0\)</span>, the energy also goes to zero. Instead, for massive objects the energy tends to the rest energy <span class="math">\(mc^2\)</span>. Therefore it makes sense to extend the definition of the rest energy <span class="math">\(E_0 = mc^2\)</span> to photons, with <span class="math">\(m=0\)</span>, even if the cannot ever be brought to rest.</p>
+<p>The energy of a photon is entirely kinetical.</p>
+<p>Note that the previous expressions <span class="math">\(E = \gamma(v) m c^2\)</span> and <span class="math">\(p = \beta(v)\gamma(v) m c\)</span> when <span class="math">\(m=0\)</span> are both indeterminate forms (<span class="math">\(0\cdot\infty\)</span>). This makes sense: we have many photons, all with <span class="math">\(v=c\)</span>, with different momentum and energy. We shouldn't be able therefore to determine the energy/momentum exactly just from the speed, so the math honourably breaks down.</p>
+
+			</div>
+</div>
+</body>
+</html>

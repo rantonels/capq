@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>CAPQ - </title>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../style/style.css">
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+<div class="col-md-12">
+	<h2 class="text-center">CAPQ - <a href="../">back to index</a></h1>
+
+</div>
+
+
+
+<div class="container">
+	<div class="col-md-12">
+
+
+		<h1 id="qed1---how-does-123ldots-112zeta-regularization-enter-in-the-casimir-effect">QED1 - How does <span class="math">\(1+2+3+\ldots=-1/12\)</span>/<span class="math">\(\zeta\)</span>-regularization enter in the Casimir effect?</h1>
+<p>The Casimir effect is an attractive force between very close parallel conducting plates and it's a consequence of the quantum nature of the EM field. There are numerous ways to derive it, with various levels of rigour, but the one employing zeta-regularization holds a special place in my heart.</p>
+<p>For simplicity, reduce from three to just one spatial dimension. This doesn't change the essential points of the computation. Then our parallel plates are actually two barriers, one at <span class="math">\(x=0\)</span> and one at <span class="math">\(x=a\)</span>, with <span class="math">\(a\)</span> the spacing. We know conductors act in a way as to make the longitudinal component of the electric field vanish on them. So we can model these boundary conditions as</p>
+<p><span class="math">\[ \vec E(t,0) = 0 \quad \quad \vec E(t,a) = 0\]</span></p>
+<p>The electric field satisfies the wave equation both inbetween and outside the plates:</p>
+<p><span class="math">\[ \Box \vec E(t,x) = \left( \frac{1}{c^2} \partial_t^2 - \partial_x^2 \right) \vec E(t,x) = 0 \]</span></p>
+<p>Now, since this equation is linear it's really tempting to write down a Fourier series for the electric field. We know that any function on the interval <span class="math">\([0,a]\)</span> can be expanded in this basis of fundamental waves:</p>
+<p><span class="math">\[ S_n(x) = \sin(k_n x)\]</span></p>
+<p>with <span class="math">\(k=\frac{\pi n}{a}\)</span>, <span class="math">\(n=1,2,\ldots\)</span>. These are a bit different than the usual presentation of Fourier Series in that they use only sines (but halve the lowest period). If you are not familiar with Fourier sine series <a href="http://web.mit.edu/18.06/www/Spring09/sines.pdf">this</a> is a good read.</p>
+<p>We can decompose any function on the interval in this basis:</p>
+<p><span class="math">\[ f(x) = \sum_{n=1}^\infty f_n \sin(k_n x) \]</span></p>
+<p>So let's do that for the electric field at a given time <span class="math">\(t\)</span>.</p>
+<p><span class="math">\[ \vec E(t,x) = \sum_{n=-\infty}^\infty \sum_i A_{ni}(t) \sin(k_n x) \vec e_i \]</span></p>
+<p>Since <span class="math">\(\vec E\)</span> is a vector, we have to introduce two basis polarization vectors <span class="math">\(\vec e_y\)</span>, <span class="math">\(\vec e_z\)</span> pointing in the <span class="math">\(y\)</span> and <span class="math">\(z\)</span> directions, and sum over polarization (<span class="math">\(i=y,z\)</span>). We have therefore two modes of oscillation for each value of <span class="math">\(n\)</span>, corresponding to the two polarizations. The <span class="math">\(\vec e_x\)</span> polarization does not exist, because the electromagnetic field does not have a longitudinal component in free space.</p>
+<p><span class="math">\(A_{ni}(t)\)</span> is the coefficient of the expansion of <span class="math">\(\vec E(t)\)</span> in the mode given by <span class="math">\(n\)</span> and <span class="math">\(i\)</span>, and obviously depends on time.</p>
+<p>The expression obtained for the electric field automatically satisfies the boundary conditions <em>if</em> the coefficient <span class="math">\(A_{ni}\)</span> are not too crazy (it's still an infinite sum of functions, it's no joke).</p>
+<p>Let us study the time evolution of <span class="math">\(A_{ni}\)</span>. Since the equation is linear, we just plug into the equation one single term from our expansion of the electric field:</p>
+<p><span class="math">\[ \Box ( A_{ni}(t) \sin(k_n x) ) = \frac{1}{c^2} \left(\partial_t^2 A_{ni}(t) \right) \sin(k_n x) - k_n^2 A_{ni}(t) \sin(k_n x) = 0 \Rightarrow \]</span></p>
+<p><span class="math">\[ \partial_t^2 A_{ni}(t) + \omega_n^2 A_{ni}(t) = 0 \]</span></p>
+<p>with <span class="math">\(\omega_n = ck_n\)</span>. This is the equation for a harmonic oscillator! Of course this is no surprise, it's well-known that</p>
+<p><span class="math">\[ \vec E_{ni} (t,x) = A_{ni} (t) \sin(k_n x) \vec e_i\]</span></p>
+<p>is a standing-wave solution for the wave equation. The interesting bit is that this can be a way to get insight about the quantization without actually studying quantum field theory. This is because anyone who has studied a bit of basic quantum mechanics knows about the quantum harmonic oscillator (QHO) and how it's energy spectrum is given by</p>
+<p><span class="math">\[ \mathcal{E} = \hbar \omega \left(m + \frac{1}{2}\right) \quad \quad m = 0,1,2,\ldots \]</span></p>
+<p>So we hope that substituting our classical harmonic oscillator with its quantum counterpart we would be doing something presumably similar to what actually quantizing the EM field is. Let's try that. Each mode <span class="math">\((n,i)\)</span> has a QHO associated with energy</p>
+<p><span class="math">\[\mathcal{E}^{ni} = \hbar \omega_n \left( m^{ni} + \frac{1}{2} \right) \]</span></p>
+<p>and the total energy of the quantum EM field is given by <span class="math">\(\mathcal{E} = \sum_n \sum_i \mathcal{E}^{ni}\)</span>.</p>
+<p>We have unknowingly discovered photons.</p>
+<p>The number <span class="math">\(m^{ni}\)</span> is actually <em>the number of photons in the mode <span class="math">\((n,i)\)</span></em>, and takes the name of occupation number. Since photons are indistinguishable, you can describe the total state just by specifying how many photons have momentum <span class="math">\(\hbar k\)</span> and polarization <span class="math">\(\vec\varepsilon\)</span>, how many <span class="math">\(\hbar k&#39;\)</span> and <span class="math">\(\vec\varepsilon&#39;\)</span>, and so on; so just the full set of occupation numbers. The state with lowest energy possible is the one with <span class="math">\(0\)</span> photons in each single mode, and we call that the vacuum. All the <span class="math">\(m^{ni}\)</span> vanish and we are left with the energy per mode:</p>
+<p><span class="math">\[\mathcal{E}_0^{ni} = \frac{ \hbar \omega_n}{2}\]</span></p>
+<p>this is called the zero-point energy of the QHO, and is well-known to students of quantum mechanics. Even with zero photons in a specific mode, that mode has a certain energy. We can write down the total energy of the vacuum as the sum of the zero-point energies over all modes:</p>
+<p><span class="math">\[\mathcal{E}_0 = \sum_{n=1}^\infty \sum_i \frac{\hbar \omega_n}{2} = \frac{\hbar c \pi}{a} \sum_{n=1}^\infty n = \frac{\hbar c \pi}{a} \left(1+2+3+4+\ldots \right) = \infty \]</span></p>
+<p>Ugh. It's divergent. The total vacuum energy inbetween the plates is infinite. Physically, we can interpret it as being due to the ever-increasing contribution of high-momentum modes (it's a &quot;UV&quot; thing in QFT-speak). This divergence is most annoying and we must get rid of it someway. The reason I'm making you compute the total vacuum energy is more or less this: if the vacuum energy depends on the value of the separation <span class="math">\(a\)</span>, then it acts as a sort of potential energy, that induces a force on the plates. I mean</p>
+<p><span class="math">\[ U(a) = \mathcal{E}_0(a) \Rightarrow F(a) = - \frac{d}{da} U(a) \]</span></p>
+<p>but if <span class="math">\(U(a)\)</span> is infinity that's kind of difficult to work with. There must be another infinity we should subtract to cancel the divergence. An interesting candidate is the <em>vacuum energy in the region without the plates if the plates were not there</em>. We can subtract that:</p>
+<p><span class="math">\[ U(a) = \mathcal{E}_0(a) - \mathcal{E}_0^{\text{no plates}} \]</span></p>
+<p>Makes sense, <span class="math">\(U(a)\)</span> it's the energy associated with putting the plates there. Now <span class="math">\(\mathcal{E}_0^{\text{no plates}}\)</span> is computed in a way entirely analogous to how we calculated <span class="math">\(\mathcal{E}_0(a)\)</span>, but with a significant difference: the wavenumber <span class="math">\(k\)</span> is a continuous variable. Inbetween the plates the electric field was constrained by the boundary conditions and therefore only multiples of the fundamental wavenumber <span class="math">\(k_1 = \frac{ \pi n}{a}\)</span> were allowed. No such restriction exists without them and long story short our potential ends up being the difference of a divergent sum and a divergent integral:</p>
+<p><span class="math">\[ U(a) = \frac{\hbar c \pi}{a} \left( \sum_{n=1}^\infty n   -  \int_0^\infty n dn \right) = \infty - \infty\]</span></p>
+<p>That's looking undoubtedly better, but it's still bad. We are still summing and integrating to infinity <em>separately</em>, then subtracting. Let's instead trying summing/integrating <em>simultaneously</em>, and see if something cancels before we go to infinity. For this we introduce a regulator <span class="math">\(\Lambda\)</span>, a maximum value for <span class="math">\(n\)</span>. Then we hope to find that in the limit <span class="math">\(\Lambda\rightarrow \infty\)</span> we get a finite result not depending on <span class="math">\(\Lambda\)</span>. This is also physically reasonable: the conductor blocks the electric field by having electrons oscillate with the same frequency in a way to cancel out the field of an incoming wave; above a certain frequency, we expect the conductor to not be able to catch up. The conductor <em>must</em> be permeable to EM waves above some frequency. Anyways, so we do</p>
+<p><span class="math">\[ U(a) = \frac{\hbar c \pi}{a} \left( \sum_{n=1}^\Lambda n - \int_0^{\Lambda} n dn \right)\]</span></p>
+<p>Which is better, because the sum of the first <span class="math">\(\Lambda\)</span> integers goes as <span class="math">\(\sim \frac{1}{2} \Lambda^2\)</span> and the integral from <span class="math">\(0\)</span> to <span class="math">\(\Lambda\)</span> goes as <span class="math">\(\sim\frac{1}{2} \Lambda^2\)</span>, so the leading contributions cancel! This does not prove that the difference then is finite as <span class="math">\(\Lambda \rightarrow \infty\)</span>, but it's a good start. There is an explicit formula for calculating this kind of divergent series minus divergent integral things and it's the Euler-MacLaurin formula, but it's really convoluted computationally. I just want to say that what we would get it's exactly the result if we had, naively, made the substitution</p>
+<p><span class="math">\[ 1+2+3+\ldots \rightarrow -\frac{1}{12} \]</span></p>
+<p>which is what is dictated by <span class="math">\(\zeta\)</span>-regularisation. This is, very handwavingly, because <span class="math">\(\zeta\)</span>-regularisation makes some kind of statement that could be depicted schematically as:</p>
+<p><span class="math">\[ 1+2+3+\ldots = \infty - \frac{1}{12}\]</span></p>
+<p>and we then subtract exactly that infinity when removing <span class="math">\(\mathcal{E}_0^{\text{no plates}}\)</span>. Now, this is not a rigorous statement, but it's undoubtedly much easier to compute this way, and we immediately get our result:</p>
+<p><span class="math">\[ U(a) = \frac{\hbar c \pi}{a} \frac{-1}{12} = - \frac{\hbar c \pi}{12 a} \]</span> <span class="math">\[ \Rightarrow F(a) = -\frac{d}{da} U(a) = - \frac{\hbar c \pi}{12 a^2} \]</span></p>
+<p>That's cool, and it's attractive, but that's not the expression for the Casimir force on Wikipedia. Remember we've done this in one dimension; in three dimensions you get</p>
+<p><span class="math">\[ \frac{U(a)}{A} = - \frac{\pi^2}{720} \frac{\hbar c}{a^3} \]</span> <span class="math">\[ \Rightarrow \frac{F(a)}{A} = - \frac{\pi^2}{240} \frac{\hbar c}{a^4}\]</span></p>
+<p>which is the well-known expression - everything is per unit of area of the plates. (In this case, the divergent sum-integral pair is not the same as <span class="math">\(1+2+3+\ldots\)</span>, but it's equally nasty, and the same arguments apply).</p>
+<p>AFAIK the Casimir force with the expression above was experimentally observed in at least two great experiments, first by Lamoreaux in 1997 at the U of Washington and then by Bressi, Carugno, Onofrio, Ruoso in 2002 at the University of Padua. There is now an entire field of Casimir nanophysics.</p>
+<p>Good reads:</p>
+<ul>
+<li>For more on the justification and meaning of the use of <span class="math">\(\zeta\)</span>-regularisation in the Casimir effect and vacuum energy: <a href="https://en.wikiversity.org/wiki/Quantum_mechanics/Casimir_effect_in_one_dimension">https://en.wikiversity.org/wiki/Quantum_mechanics/Casimir_effect_in_one_dimension</a></li>
+<li>Terrence Tao on <span class="math">\(\zeta\)</span>-reg: <a href="https://terrytao.wordpress.com/2010/04/10/the-euler-maclaurin-formula-bernoulli-numbers-the-zeta-function-and-real-variable-analytic-continuation/">https://terrytao.wordpress.com/2010/04/10/the-euler-maclaurin-formula-bernoulli-numbers-the-zeta-function-and-real-variable-analytic-continuation/</a></li>
+<li>For a concise derivation in three dimensions using <span class="math">\(\zeta\)</span>-reg: <a href="https://en.wikipedia.org/wiki/Casimir_effect#Derivation_of_Casimir_effect_assuming_zeta-regularization">https://en.wikipedia.org/wiki/Casimir_effect#Derivation_of_Casimir_effect_assuming_zeta-regularization</a></li>
+<li>Some people are strongly critical or at least skeptic of vacuum fluctuations as the correct way to see the Casimir effect. A sensible argument is <a href="http://arxiv.org/abs/hep-th/0503158">http://arxiv.org/abs/hep-th/0503158</a></li>
+</ul>
+
+			</div>
+</div>
+</body>
+</html>

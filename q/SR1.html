@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>CAPQ - </title>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../style/style.css">
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+<div class="col-md-12">
+	<h2 class="text-center">CAPQ - <a href="../">back to index</a></h1>
+
+</div>
+
+
+
+<div class="container">
+	<div class="col-md-12">
+
+
+		<h1 id="sr1---in-what-sense-does-emc2-and-what-does-it-mean">SR1 - In what sense does <span class="math">\(E=mc^2\)</span>, and what does it mean?</h1>
+<p>Ok, ok, ok. Let's take a deep breath.</p>
+<p>When switching from Newtonian to relativistic physics, a couple of formulas have to be explicitly replaced. In particular, we can summarize this shift in the following substitutions for the mechanical energy and linear momentum of a body:</p>
+<p><span class="math">\[E_N = \frac{1}{2} m v^2 \longrightarrow E = \frac{1}{\sqrt{1-(v/c)^2}} m c^2\]</span></p>
+<p><span class="math">\[p_N = m v \longrightarrow p = \frac{v/c}{\sqrt{1-(v/c)^2}} m c\]</span></p>
+<p>These might look a bit daunting, and additionally I just pulled them out of my ass. Just trust me that they can be derived rigorously. Let us concentrate on interpreting them and their consequences.</p>
+<p>The Newtonian expressions should be well-known; they are however incorrect when speed becomes relativistic (<span class="math">\((v/c) &gt; 0.1\)</span> is a good rule-of-thumb) and must be replaced by the formulas on the right.</p>
+<p><span class="math">\(m\)</span> is the mass. Just mass. It's a constant <em>and</em> an invariant for the object. It does not depend on the frame of reference nor the <em>global</em> state of motion of the body (I'll clarify this adjective in a minute). Do not trust anyone talking about &quot;relativistic mass&quot;, it's an old concept from when people were still trying to figure out this stuff and it makes everything <em>immensely</em> more complex (just a taste: there is a transverse and a longitudinal relativistic mass). Only ever discuss invariant mass, or just mass.</p>
+<p><span class="math">\(v\)</span> is simply how much space the body travels over how much time, with space and time measured in a certain inertial frame. I really want to stress the simplicity of this definition, because people often get confused with time dilation and length contraction and other complications, while this definition is absolutely crystal clear:</p>
+<p><span class="math">\[ v = \frac{dx}{dt} \]</span></p>
+<p>where <span class="math">\(x\)</span> and <span class="math">\(t\)</span> are the space and time coordinates of the body in some coordinate system (reference frame), nothing to do with proper time or anything of that sort. No magic here.</p>
+<p>And <span class="math">\(c\)</span>, of course, is the speed of light in vacuum.</p>
+<p>The <span class="math">\(v/c\)</span> ratio and the <span class="math">\((1-(v/c)^2)^{-1/2}\)</span> thing are so ubiquitous in SR that we give them the following names:</p>
+<p><span class="math">\[ \beta := v/c \quad\quad\quad \gamma := \frac{1}{\sqrt{1-\beta^2}}\]</span></p>
+<p>So the formulas simplify to <span class="math">\(E = \gamma m c^2\)</span> and <span class="math">\(p = \beta \gamma m c\)</span>.</p>
+<p>Now, the burden of proving that the relativistic expressions do actually reduce to the Newtonian expressions in the nonrelativistic limit is on us. The nonrelativistic limit is when <span class="math">\(v \ll c\)</span>, or equivalently <span class="math">\(\beta \ll 1\)</span>. To do so, let us recall the following Taylor expansion from calculus:</p>
+<p><span class="math">\[ (1+\epsilon)^\alpha = 1 + \alpha \epsilon + \frac{\alpha(\alpha-1)}{2!} \epsilon^2 + \ldots \]</span></p>
+<p>this is simply the Binomial expansion and it's a really useful one to keep in mind (at least the first order term). We expand the <span class="math">\(\gamma\)</span> factor using <span class="math">\(\epsilon = -\beta^2\)</span> as such:</p>
+<p><span class="math">\[ \gamma = \left(1-\beta^2 \right)^{-1/2} = 1 + \frac{1}{2} \beta^2 + \ldots \]</span></p>
+<p>Second-order in <span class="math">\(\beta\)</span> is all we really need. So, finally, for the mechanical energy and momentum in the nonrelativistic limit we get:</p>
+<p><span class="math">\[ E = m c^2 + \frac{1}{2} m v^2 + \ldots\]</span> <span class="math">\[ p = m v + \ldots\]</span></p>
+<p>In the expression for <span class="math">\(p\)</span> I've stopped at the first term because the next is order <span class="math">\(\beta^3\)</span>.</p>
+<p>There's something seriously wrong. <span class="math">\(p\)</span> looks like its Newtonian counterpart <span class="math">\(p_N\)</span>, while <span class="math">\(E\)</span> has an additional spurious term, <span class="math">\(mc^2\)</span>. This is not a small term. In fact it's huge.</p>
+<p><span class="math">\(E_0 := mc^2\)</span> is the energy the body has when <span class="math">\(v=0\)</span>, so it's called the rest energy. Why does it not completely invalidate Newtonian mechanics?</p>
+<p>Mostly, it's because it's impossible to tap into this energy. In nonrelativistic mechanics, mass is conserved (it is <strong>not</strong> conserved in special relativity). This means that in any physical process, <span class="math">\(E_0\)</span> is untouched. It decouples completely from the physics, and thus it's just an invisible energy shift.</p>
+<p>Mechanics (and Physics in general) is insensible to global energy shifts. For example, if your mechanical energy is</p>
+<p><span class="math">\[ E = \frac{1}{2} m v^2 + 49\, \text{J} \]</span></p>
+<p>nothing changes in your dynamics. You just added a constant, so what. Since <span class="math">\(mc^2\)</span> is effectively a constant in nonrelativistic physics, it does not affect dynamics and could not be derived even in principle by a nonrelativist not aware of special relativity. In fact, Newton just set that constant to zero for simplicity.</p>
+<p>Now, we said that <span class="math">\(E_0\)</span> is the energy the body has when it's at rest. So we can conveniently divide our total energy in <span class="math">\(E_0\)</span> and a term we rightfully call kinetic energy:</p>
+<p><span class="math">\[ E = \gamma m c^2 = m c^2 + (\gamma - 1) m c^2 =: E_0 + E_K\]</span></p>
+<p>Since <span class="math">\(\gamma-1 \sim \frac{1}{2} \beta^2\)</span> it's clear that the nonrelativistic limit is just <span class="math">\(E_K \ll E_0\)</span>.</p>
+<p>This is starting to make sense: <span class="math">\(E_0\)</span> is the energy the object has simply for existing, there is an energy cost associated with just having a mass. It is the difference between the energy of a state where the object exists (and is still) and one where it doesn't. It's the required energy to create it, or the yield if it's destroyed. Of course, this does not prove that it's possible to create or destroy mass, just that <em>if</em> there is a channel for that creation or destruction, that is the energy requirement.</p>
+<p>Since in nonrelativistic mechanics the energies involved in processes (<span class="math">\(E_K\)</span>) are much smaller than the <span class="math">\(E_0\)</span> for an object, creation and destruction of mass most certainly do not happen in nonrelativistic physics.</p>
+<p>Since <span class="math">\(E_0\)</span> is the total energy of the object when it's still, it's reasonable that if the object was a composite system made of smaller units, it also includes the internal energy, not just the sum of the rest energies of the components.</p>
+<p>Take for example a stationary box filled with a gas at temperature T. The overall, or average velocity of the gas is zero, but the single particle of the gas will have a nonzero velocity and consequently a kinetic energy <span class="math">\(E_K^i\)</span>. The total energy is</p>
+<p><span class="math">\[\sum_i E^i = \sum_i m c^2 +  \sum_i E_K^i \]</span></p>
+<p>but we have said that this must be <span class="math">\(E_0 = M c^2\)</span>, with <span class="math">\(M\)</span> the mass of the box, so</p>
+<p><span class="math">\[ M = \sum_i m + \frac{1}{c^2} (\sum_i E_K^i) \]</span></p>
+<p>So, the mass of the box is actually greater than the sum of the masses of the particles! Albeit, by a very, very small amount, that only gets relevant if <span class="math">\(E_K^i\)</span> is at least of order <span class="math">\(m c^2\)</span>. This shows that mass is not additive, and displays the so called &quot;mass-energy equivalence&quot; which is more correctly expressed as:</p>
+<p><span class="math">\[U = m c^2\]</span></p>
+<p>that is, mass (as in, the inertia measured in Newtonian mechanics) is equivalent to the <em>total</em> <strong>internal</strong> energy, also including the energy to create the constituents.</p>
+<p>This is why people will shout at you that <span class="math">\(E=mc^2\)</span> is not the full formula/is wrong. They're right. That <span class="math">\(E\)</span> is supposed to be <span class="math">\(E_0\)</span>.</p>
+
+			</div>
+</div>
+</body>
+</html>

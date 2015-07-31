@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>CAPQ - </title>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../style/style.css">
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+<div class="col-md-12">
+	<h2 class="text-center">CAPQ - <a href="../">back to index</a></h1>
+
+</div>
+
+
+
+<div class="container">
+	<div class="col-md-12">
+
+
+		<h1 id="cm1---why-is-my-physics-teacher-so-anal-about-centripetal-vs-centrifugal-is-the-centrifugal-force-fictitious">CM1 - Why is my physics teacher so anal about centripetal vs centrifugal? Is the centrifugal force &quot;fictitious&quot;?</h1>
+<p>This one is an <em>extremely heated</em> question, and this baffles me because it has no reason to be so. Still, be wary that whatever your opinion, people will invariably shout at you. With that said, let's start.</p>
+<p>Let's consider an object in uniform circular motion. This means we are in an inertial reference frame (say, laboratory, or <span class="math">\(K\)</span>) and we force an object of mass <span class="math">\(m\)</span> to follow a circular trajectory of radius <span class="math">\(R\)</span> with constant speed <span class="math">\(v\)</span>. We are interested in finding the acceleration of the object.</p>
+<p>Let me rapidly review how one could compute such an acceleration. I'm gonna do it very very quickly using trigonometry, but most textbooks take more time and calculate <span class="math">\(\vec a\)</span> using a mostly &quot;geometric&quot; approach coherent with Newtonian tradition, so refer to them if you want a simpler proof. Here I'm interested more in dealing with it and moving on to the interesting conceptual question. So, in coordinates, with <span class="math">\(xy\)</span> the plane of rotation and <span class="math">\(z\)</span> the axis of rotation:</p>
+<p><span class="math">\[ \vec r = R \begin{pmatrix} \cos(\omega t) \\ \sin(\omega t) \\ 0 \end{pmatrix} \]</span></p>
+<p>Where <span class="math">\(\omega := v/R\)</span> is the angular velocity. Then differentiating:</p>
+<p><span class="math">\[ \vec v = \frac{d}{dt} \vec r = \omega R \begin{pmatrix} - \sin(\omega t) \\ \cos(\omega t) \\ 0 \end{pmatrix} \]</span></p>
+<p>Note that the norm of <span class="math">\(\vec v\)</span> is <span class="math">\(\omega R = v\)</span> which justifies the definition of <span class="math">\(\omega\)</span>. And differentiating again:</p>
+<p><span class="math">\[ \vec a = R \omega^2 \begin{pmatrix} -\cos(\omega t) \\ -\sin(\omega t) \\ 0 \end{pmatrix} = - \omega^2 \vec r \]</span></p>
+<p>so we have a purely radial acceleration pointing <em>inwards</em>, so a centripetal acceleration.</p>
+<p>Centripetal (not centripe<strong>d</strong>al) and centrifugal are both words created by Sir Isaac himself back in 1687, who wrote in Latin. The first part of the word comes from <em>centrum</em>, &quot;centre&quot; (itself from Greek <em>κέντρον</em> meaning &quot;sharp point&quot;). -petal is from <em>petō</em>, meaning to beg, to seek. -fugal is from <em>fugiō</em>, meaning to flee. They're pretty self-explanatory when presented this way.</p>
+<p>So we have a centripetal acceleration and consequently, if Newton's second law is to be trusted, then</p>
+<p><span class="math">\[ \vec F = m \vec a\]</span></p>
+<p>there must be a centripetal force. So to keep an object in circular uniform motion, a centripetal force pulling it towards the centre is necessary.</p>
+<p>In fact, to keep the mass in circular motion we've needed exactly a force pushing <em>radially inwards</em>. If we use a rope, the tension of the rope is the centripetal force that keeps the mass in circular motion.</p>
+<p>So far, no trace of the centrifugal force, and that's ok.</p>
+<p>But now, let's move to the corotating frame <span class="math">\(K&#39;\)</span>. The corotating frame rotates along with the mass and the rope; in this frame the mass and rope are immobile, and the rest of the lab rotates around them. The position of the mass is fixed at:</p>
+<p><span class="math">\[ \vec r&#39; = R \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} \]</span></p>
+<p>and the velocity <span class="math">\(\vec v&#39; = \frac{d}{dt} r&#39; = 0\)</span> and <span class="math">\(\vec a&#39; = 0\)</span>. So, if Newton's law held, we would have</p>
+<p><span class="math">\[\vec F&#39; = 0\]</span></p>
+<p>but we already knew the only force acting on the mass in the centripetal tension of the rope, which is definitely nonzero, so this makes very little sense.</p>
+<p>The point is that the corotating frame is non inertial. An inertial frame is one where Newton's second law is true. Instead in a noninertial frame the difference between the forces applied and those needed for mantaining that motion is nonzero:</p>
+<p><span class="math">\[m \vec a&#39; - \vec F&#39; =: \vec F_\text{in}\]</span></p>
+<p><span class="math">\(F_\text{in}\)</span> are the so-called <em>inertial forces</em>, since they might as well be thought to be forces acting exclusively because we've moved to a non-inertial frame. The advantage of seeing these as forces is that we can restore Newton's second law by adding them together with the &quot;physical&quot; forces:</p>
+<p><span class="math">\[ (\vec F&#39; + \vec F_\text{in} ) = m \vec a&#39; \]</span></p>
+<p>which is pretty remarkable. In our case, <span class="math">\(\vec a&#39; = 0\)</span>, so</p>
+<p><span class="math">\[\vec F_\text{in} = - \vec F_\text{tension}\]</span></p>
+<p>so the inertial force points radially outwards, and is therefore a <em>centrifugal</em> force.</p>
+<p>Why do, mathematically, inertial forces arise?</p>
+<p>Consider a change of coordinates on space from frame <span class="math">\(K\)</span> to the corotating frame <span class="math">\(K&#39;\)</span>. This is in general given by a function <span class="math">\(\vec r&#39; = \xi(\vec r;t)\)</span>, where I've explicitated that our change of coordinates might depend on time. Now one typically in Newtonian mechanics works with <em>affine</em> coordinate changes, of the form:</p>
+<p><span class="math">\[\vec r&#39; = \Omega(t) \vec r + \vec b(t)\]</span></p>
+<p>where <span class="math">\(\Omega(t)\)</span> is a matrix and both <span class="math">\(\Omega(t)\)</span> and <span class="math">\(\vec b(t)\)</span> depend on time. The acceleration in <span class="math">\(K&#39;\)</span> is therefore</p>
+<p><span class="math">\[v&#39; = \dot {\vec r} = \dot {\Omega} \vec r + \Omega \dot {\vec r} + \dot {\vec b}\]</span></p>
+<p><span class="math">\[a&#39; = \dot{\vec v} = \ddot {\Omega} \vec r + 2 \dot {\Omega} \vec v + \Omega \vec a + \ddot {\vec b}\]</span></p>
+<p>where I've made use of Newton's own dot notation for time derivatives. Note that <em>if</em> <span class="math">\(\Omega\)</span> and <span class="math">\(\vec b\)</span> were <em>constant</em> in time, we would have</p>
+<p><span class="math">\[\vec v&#39;_0 = \Omega \vec v\]</span> <span class="math">\[\vec a&#39;_0 = \Omega \vec a\]</span></p>
+<p>which is interesting. It means, for example, that if you change between frames of reference that are rotated between eachother by a constant angle (i.e.: <span class="math">\(\Omega\)</span> is a constant rotation matrix) then your new <span class="math">\(v\)</span> and <span class="math">\(a\)</span> will be the the old ones rotated by the same angle. Instead, in the general case where <span class="math">\(\Omega(t)\)</span> and <span class="math">\(\vec b(t)\)</span> are time-dependent, we get</p>
+<p><span class="math">\[\vec a&#39; = \vec a&#39;_0 + \ddot{\Omega} \vec r + 2 \dot {\Omega} \vec v + \ddot{\vec b}\]</span></p>
+<p>That is: the fact that the parameters that describe the change of coordinates in space depend on time <em>implies</em> that accelerations will be augmented by additional, &quot;spurious&quot; terms due to the variation in time of said parameters. We switch to forces by multiplying by <span class="math">\(m\)</span>:</p>
+<p><span class="math">\[m \vec a&#39; = \vec F&#39; + m \left( \ddot {\Omega} \vec r + 2 \dot{ \Omega} \vec v + \ddot {\vec b}\right)\]</span></p>
+<p><span class="math">\[=: \vec F&#39; + \vec F_\text{in}\left(\vec r&#39;,\vec v&#39;\right)\]</span></p>
+<p>So, I've identified <span class="math">\(m \vec a&#39;_0\)</span> as the total &quot;physical&quot; force, that is the transformed version (<span class="math">\(\vec F&#39; = \Omega \vec F\)</span>) of the forces already present in <span class="math">\(K\)</span> (such as the centripetal force). But in addition to that we have all those other terms, which I've grouped together in the total inertial force <span class="math">\(\vec F_\text{in}\)</span>. I've written the inertial force as a function of the new position and velocity <span class="math">\(\vec r&#39;\)</span> and <span class="math">\(\vec v&#39;\)</span>, when the expressions above are in terms of <span class="math">\(\vec r\)</span> and <span class="math">\(\vec v\)</span>, but notice that it's easy to invert the <span class="math">\(\vec r&#39;(\vec r)\)</span> and <span class="math">\(\vec v&#39;(\vec v)\)</span> relationships and get <span class="math">\(\vec r(\vec r&#39;)\)</span> and <span class="math">\(\vec v(\vec v&#39;)\)</span>.</p>
+<p>So Newton's law does not hold with <span class="math">\(\vec F&#39;\)</span> as the total force. But we have no theorem that says that <span class="math">\(\vec F&#39;\)</span> should be identified as the total force. So we have two entirely equivalent possibilities:</p>
+<ul>
+<li>Newton's law does not hold in non-inertial frames. <span class="math">\(\vec F&#39;\)</span> are definitely the forces acting in <span class="math">\(K&#39;\)</span>, while <span class="math">\(\vec F_\text{in}\)</span> are an artefact of the non-inertiality. Therefore they are &quot;fictitious&quot; forces.</li>
+<li>Newton's law <em>does</em> continue to hold in non-inertial frames, but forces do not transform trivially between frames (i.e.: <span class="math">\(\vec F&#39; \neq \Omega \vec F\)</span>). In particular, when switching to non-inertial frames, multiple additional terms appear. The total force acting on <span class="math">\(K&#39;\)</span> then is the sum of the naive transform of the original force plus inertial forces. So inertial forces are absolutely real effects.</li>
+</ul>
+<p>Now, to the point where we've gotten so far, both seem absolutely equivalent viewpoints in terms of physics (which is just concerned about measurement results) and the question seem exquisitely philosophical. In light of this, why do people spend so much energy striving to prove the inherent superiority of the first version, the &quot;fictitious&quot; one? I'm talking about adages like</p>
+<blockquote>
+<p>inertial forces are fake forces, they are &quot;an illusion&quot;</p>
+</blockquote>
+<p>or even this</p>
+<blockquote>
+<p>&quot;centrifugal&quot; force? Maybe you mean <em>centripetal</em>. The centrifugal force does not exist.</p>
+</blockquote>
+<p>as if the centrifugal force suddenly became taboo. The answer is I don't know: I don't know why people do this. Wikipedia's article is literally named Fictitious Force, and this view was also very likely that of Newton.</p>
+<p>Inertial forces are actually pretty real. If I'm riding a merry-go-round, I can measure a force pushing me outwards. If I weigh myself at the equator, I weigh slightly less than at the poles. Sure, you can just impose that non-inertial frames are fundamentally inferior to inertial frames and that the correct description of my dynamometer or scale is only that where it's rotating, but it's kind of annoying to call (even indirectly) the most complicated picture the &quot;more correct&quot; one. Still, the question mantains a purely philosophical nature and therefore I don't enjoy speculating on it.</p>
+<p>Here's a pre-packaged answer if your professor asks you wheter a centrifugal or centripetal force is acting on a rotating object (which is an absolutely legitimate question to be anal about):</p>
+<p>In the inertial frame of the lab, where the object performs the uniform circular motion, there is a centripetal force. In the corotating frame, there is both a centrifugal and centripetal force.</p>
+<p>and if he asks &quot;yeah, well, ok, but which one is the <em>real</em> one&quot; then ask him to sod off and inform him that forces, like many things in life, depend on the reference frame. End of story.</p>
+<p>A last thing: there is actually an immensely remarkable fact about the Universe that is a strong point in favour of the second view, that in which inertial forces are &quot;real&quot;:</p>
+<p><strong>All four fundamental forces (electromagnetism, weak, strong, gravity) are inertial forces.</strong></p>
+<p>For example, gravity can (by virtue of the equivalence principle and general relativity) be cancelled locally by a suitable change of coordinates. If you are standing on the surface of the Earth, a local change to free-falling coordinates cancels the gravitational force; it's instead the ground that is accelerating upwards at <span class="math">\(g\)</span> and pushing on you, accelerating you upwards. A free-falling object, instead, feels no force in this (local) frame. The sacred &quot;lab frame&quot; where stuff falls at <span class="math">\(g\)</span> is actually <em>non-inertial</em>, and the force of gravity is the inertial force associated with the non-inertiality of that frame! This is the fundamental starting point of general relativity. And in general relativity, sometimes spacetime is curved, and <em>inertial frames do not exist</em>. A worldview obsessed with separating the &quot;real&quot; forces from the &quot;fake&quot; forces is in some serious difficulty.</p>
+<p>But what's even more interesting (and less known) is that the other fundamental forces (electroweak and strong) act in a similar fashion. They are &quot;inertial&quot; forces due to the &quot;non-inertiality&quot; of some &quot;frame&quot; and can be locally cancelled by a suitable local &quot;change of coordinates&quot;. I put stuff in quotes because this actually involves coordinate transformations in some &quot;internal&quot; space instead of spacetime, but the math (gauge theory) is almost identical.</p>
+<p>Note that the electromagnetic force is at the base of the microscopical description of the tension force holding the mass in circular motion, the centripetal force. So, no pun intended, we've come full circle.</p>
+
+			</div>
+</div>
+</body>
+</html>
