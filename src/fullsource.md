@@ -421,7 +421,7 @@ and so $V$ is both a function of spacecraft position $r$ *and* time $t$, through
 
 Now, let's take a look at our hyperbolic encounter from another perspective. Let's zoom back:
 
-![](../images/pluto_scatter)
+![you can actually hear the 'thump' sound](../images/pluto_scatter)
 
 That's interesting. It looks like the spacecraft has *bounced* on the planet. In fact it acted *precisely* like a ball bouncing on another, very massive, ball in an elastic collision would. This is why a fly-by or an encounter can also be seen as an elastic collison or an elastic scattering. Basically by zooming out we've discarded all (for now) superfluous information on the specific hour-by-hour details of the encounter and reduced ourselves to the relevant information over the course of months: the spacecraft approaches the planet with constant velocity $\vec v_i$, interacts with the planet at a discrete event where it's given a change in velocity $\Delta \vec v$, and exits with constant velocity $\vec v_f$.
 
@@ -932,7 +932,7 @@ The short answer is that quantum corrections to the photon propagator do not giv
 
 The probability amplitude for a photon to go from point A to point B is given by what is called the propagator. The "bare" propagator is given by the following expression:
 
-![](../images/bare "bare") $= \pi^{\mu\nu}(q) = \frac{-ig^{\mu\nu} }{q^2 + i\epsilon} $
+![](../images/bare "bare")\ $= \pi^{\mu\nu}(q) = \frac{-ig^{\mu\nu} }{q^2 + i\epsilon} $
 
 where $q$ is the four-momentum of the photon and $\epsilon$ is a funny thing you shouldn't worry about. In fact, put it to 0. This is how a massless propagator should look. The mass of the particle is given by where the propagator is singular (has a pole), so in this case $q^2 = m^2 = 0$. (If the photon was massive, in the denominator we would have $q^2-m_\gamma^2 + i \epsilon$). The propagator has two Lorentz indices $\mu$ and $\nu$ because the photon has a polarization. To get the probability amplitude, you actually have to contract the indices of the propagator with your desired polarization $\varepsilon_\mu$
 
@@ -942,7 +942,7 @@ But this is just the bare propagator, this is all tree-level. We want to compute
 
 *should* affect the probability of the photon going from point A to point B. In fact, when summing over all possible diagrams for the $\gamma\rightarrow \gamma$ process:
 
-$\Pi(q) = $ ![](../images/dressed "dressed") $=$ ![](../images/bare) $+$ ![](../images/one-floop) $+$ ![](../images/bibubble) $+$ ![](../images/twobubble) $+ \ldots$
+$\Pi(q) = $ ![](../images/dressed "dressed")\ $=$ ![](../images/bare)\ $+$ ![](../images/one-floop)\ $+$ ![](../images/bibubble)\ $+$ ![](../images/twobubble)\ $+ \ldots$
 
 we should get the "dressed", or physical propagator $\Pi^{\mu\nu}$. (A quick review of Feynman diagrams: time goes from left to right, wavy lines are photons, solid lines going right are electrons, left are positrons). Now we want to rearrange the terms of the previous series. Call a diagram one-particle-irreducible (1PI) if you cannot split it in two by cutting one of the internal lines (the two wavy lines at the beginning and end don't count). For example, the following diagrams are respectively 1PI and not 1PI.
 

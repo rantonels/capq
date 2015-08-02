@@ -48,7 +48,7 @@ images/pdf: images/feynman images
 	touch images/pdf
 
 
-q/%.html : src/q/%.md
+q/%.html : src/q/%.md style/questionlayout.html images
 	pandoc $< \
 		--mathjax \
 		-s \

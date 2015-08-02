@@ -58,7 +58,7 @@ categories = {
 
 def print_toc():
     for ac,c in sorted(categories.items(),key=lambda x:x[1][0]):
-        print "### "+c[1]
+        print "## "+c[1]
         print
         for entry in c[2]:
             f = open('src/q/'+entry+'.md','r')

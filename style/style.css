@@ -18,8 +18,8 @@ body{
  	following are additional color options for base font
 	you could uncomment another one to easily change the base color 
 	or add one to a specific element style below         */		
-    color: #333333; /* dark gray not black */
-/    color: #000000; /* black */
+/    color: #333333; /* dark gray not black */
+    color: #000000; /* black */
 /    color: #666666; /* medium gray  black */	
 /    color: #E3E3E3; /* very light gray */
 /    color: white; 
@@ -36,7 +36,7 @@ p   {
 /    font-size: 22px;
     line-height: 150%;
 /    max-width: 540px;
-    max-width: 960px;
+/    max-width: 960px;
     font-weight: 400;
      color: #333333;
      text-align: justify;
@@ -82,17 +82,19 @@ h6 {
     font-variant:small-caps;
 }
 a {
-    color: #007a9d;
+/    color: #007a9d;
+    color: #1f8aa7;
     margin: 0;
     padding: 0;
     vertical-align: baseline;
     text-decoration:none;
 }
 a:hover {
-    color: #e05151;
+/    color: #e05151;
+	text-decoration:none;
 }
 a:visited {
-    color: black;
+/    color: black;
 }
 ul, ol {
 /    padding: 0;
@@ -171,18 +173,60 @@ hr {
 }
 
 img.center {
+/	display: block;
+/	margin-left:auto;
+/	margin-right:auto;
+}
+
+.figure img {
 	display: block;
 	margin-left:auto;
 	margin-right:auto;
+/
+/	vertical-align: middle;
+/	margin: 10px;
 }
 
-img {
-	vertical-align: middle;
-	margin: 10px;
+.figure{
+	margin-top: 15px;
+	margin-bottom: 15px;
+/	margin: 0 auto;
+/	display:block;
+}
+
+.caption {
+	text-align:center;
 }
 
 .titlebar {
-	padding-bottom: 20px;
-	padding-top: 20px;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	background: #FBF18E;
+}
 
+.qheader {
+	background: #FBF18E;
+}
+
+.toc {
+	padding-top:30px;
+/	background: #6ab8ce;
+	background: white;
+/	color: #fbf18e;
+}
+
+.toc a {
+	color: #333333;
+}
+
+.toc h2 {
+	color: #1f8aa7;
+}
+
+.introduction {
+	background: white;
+}
+
+.downloadpanel {
+	background: white;
 }

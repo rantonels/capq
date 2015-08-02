@@ -62,7 +62,7 @@ and so $V$ is both a function of spacecraft position $r$ *and* time $t$, through
 
 Now, let's take a look at our hyperbolic encounter from another perspective. Let's zoom back:
 
-![](../images/pluto_scatter)
+![you can actually hear the 'thump' sound](../images/pluto_scatter)
 
 That's interesting. It looks like the spacecraft has *bounced* on the planet. In fact it acted *precisely* like a ball bouncing on another, very massive, ball in an elastic collision would. This is why a fly-by or an encounter can also be seen as an elastic collison or an elastic scattering. Basically by zooming out we've discarded all (for now) superfluous information on the specific hour-by-hour details of the encounter and reduced ourselves to the relevant information over the course of months: the spacecraft approaches the planet with constant velocity $\vec v_i$, interacts with the planet at a discrete event where it's given a change in velocity $\Delta \vec v$, and exits with constant velocity $\vec v_f$.
 

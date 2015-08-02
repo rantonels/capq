@@ -26,6 +26,7 @@ $highlighting-css$
   </style>
 $endif$
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 $for(css)$
   <link rel="stylesheet" href="$css$">
 $endfor$
@@ -50,7 +51,7 @@ $endfor$
 
 <div class="container">
 
-<div class="col-md-8">
+<div class="col-md-8 introduction">
 	<!--<div class="version">
 	$version$
 	</div>--!>
@@ -73,20 +74,15 @@ $endfor$
 	$endif$
 
 </div>
-<div class="col-md-4">
-	<h3>Download .pdf</h3>
+<div class="col-md-4 downloadpanel">
+	<h3><i class="fa fa-arrow-down"></i> Download .pdf</h3>
 
 <p>You can find a printable, up-to-date .pdf version of the CAPQ <a href="tex/capq-booklet.pdf">here</a>. (This .pdf is a work in progress and content might be scrambled, missing, or badly laid out.)<p>
 
 </div>
-	<div class="col-md-12">
+	<div class="col-md-12 toc">
 
-<hr>
-		$if(toc)$
-		<nav id="$idprefix$TOC">
-		$toc$
-		</nav>
-		$endif$
+		<hr>
 		$body$
 		$for(include-after)$
 		$include-after$
