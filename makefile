@@ -1,6 +1,6 @@
 COMMIT=`git log | head -n 3`
 FILES=$(shell src/builder.py print_tomake)
-HTMLS:=  $(patsubst src/q/%,q/%.html,$(wildcard src/q/*))
+HTMLS:=  $(patsubst src/q/%.md,q/%.html,$(wildcard src/q/*))
 CSS="style/style.css"
 
 IMAGES=images/pluto_types.svg images/pluto_scatter.svg
@@ -27,13 +27,15 @@ index.html:	toc.md src/preamble.html style/layout.html images style/header.html
 		--default-image-extension=svg \
 		-o index.html
 
-tex/capq-booklet.pdf:	src/source.md src/preamble.tex images/pdf
-	pandoc src/source.md \
+tex/capq-booklet.pdf:	src/fullsource.md src/preamble.tex images/pdf
+	mkdir -p tex
+	cd src && pandoc fullsource.md \
 		-s --toc \
 		--latex-engine=xelatex \
-		--include-before-body="src/preamble.tex" \
+		--include-in-header="header.tex" \
+		--include-before-body="preamble.tex" \
 		--default-image-extension=pdf \
-		-o tex/capq-booklet.pdf
+		-o ../tex/capq-booklet.pdf
 
 images: $(IMAGES) images/feynman
 
@@ -46,7 +48,7 @@ images/pdf: images/feynman images
 	touch images/pdf
 
 
-q/%.html : src/q/%
+q/%.html : src/q/%.md
 	pandoc $< \
 		--mathjax \
 		-s \
@@ -54,6 +56,11 @@ q/%.html : src/q/%
 		--template "style/questionlayout.html" \
 		--css "../style/style.css" \
 		-o $@
+
+src/fullsource.md: $(wildcard src/q/*) src/builder.py
+	src/builder.py joined_source > src/fullsource.md	 
+
+
 
 clean:
 	rm -f index.html

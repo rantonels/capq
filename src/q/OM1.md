@@ -3,7 +3,7 @@
 
 Assume we are placed at a certain height $r_p$ above the Earth, well outside the atmosphere. Give ourselves a velocity $\vec v_0$ orthogonal to the Earth-us ray vector. Assume the Earth was spherical and homogeneous, the Sun's effect were negligible and that there was no moon (how's that for simplification?). Then we know from Kepler that our possible trajectories are conic sections (ellipses, parabolas, or hyperbolas) with a focus on the Earth. We also know that our velocity is tangent to our trajectory (from standard kinematics). However, there are multiple conic sections with a focus on the Earth, passing through our current position and tangent to our velocity, as the following diagram shows:
 
-![](http://www.astro.ufl.edu/~guzman/ast1002/class_notes/Ch1/earth_orbits.gif)
+![](../images/earth_orbits.png)
 
 Exactly which conic section we'll follow by coasting in Earth's gravity is dependent on the modulus of our initial velocity. Namely, if $v_0$ was equal to the velocity needed for a circular orbit (which is $\sqrt{\frac{GM_\oplus}{r_p} }$) the orbit would be obviously a circle; if it was slightly more, the orbit would start to get elliptical.
 
@@ -97,7 +97,7 @@ $$ | \vec v_i'| \neq |\vec v_f'|$$
 
 which is precisely the $\Delta v$ we wanted. In the Sun frame, we can gain or lose velocity (and therefore energy) by "bouncing" on planets, in effect having close encounters.
 
-![](http://file2.answcdn.com/answ-cld/image/upload/w_760,c_fill,g_faces:center,q_60/v1401423276/sssckw74plxyvoespc76.png)
+![](../images/encounter.png)
 
 To understand the reasoning behind this apparently free lunch, consider as an analogy the simple case of a ball bouncing on a stationary, infinitely stiff and massive wall. By bouncing elastically on the wall, the ball only changes the direction of its speed, not the magnitude, so it cannot extract energy from the wall (but it can change its momentum).
 

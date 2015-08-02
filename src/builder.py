@@ -9,6 +9,7 @@ categories = {
             "CM2"
             ]),
     'TD':(20,'Thermodynamics',[
+            "TD1"
             ]),
     'OM':(30,'Celestial/Orbital Mechanics',[
             "OM1",
@@ -60,7 +61,7 @@ def print_toc():
         print "### "+c[1]
         print
         for entry in c[2]:
-            f = open('src/q/'+entry,'r')
+            f = open('src/q/'+entry+'.md','r')
             s = f.read().split('\n')[0].strip('#').strip(' ')
             f.close()
 
@@ -73,11 +74,22 @@ def print_tomake():
         for entry in c[2]:
             print entry
 
+def joined_source():
+    for ac,c in sorted(categories.items(),key=lambda x:x[1][0]):
+        print "#"+c[1]
+        for entry in c[2]:
+            f = open('src/q/'+entry+'.md','r')
+            print "##" + f.read()
+            f.close()
+            print
+
 import sys
 
 if sys.argv[1] == "print_toc":
     print_toc()
 elif sys.argv[1] == "print_tomake":
     print_tomake()
+elif sys.argv[1] == "joined_source":
+    joined_source()
 else:
     print "error"

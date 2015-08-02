@@ -8,7 +8,11 @@ $$\vec{F}_L = q(\vec v \times \vec B)$$
 
 With $q$ the charge of the particle. The cross product means that the force is perpendicular to both the velocity ($\vec v$)  and the magnetic field lines ($\vec B$).
 
-When you move the magnet close to the wire, you're essentially creating [this situation](https://tap.iop.org/fields/electromagnetism/414/img_full_46963.gif), only in this case it's the magnetic field that is 'moving' (actually changing). The movement of the bar PQ in the linked image causes a force on the charged particles inside it, from the right hand rule this force acts from P to Q for positively charged particles and from Q to P for negative ones.
+When you move the magnet close to the wire, you're essentially creating this situation,
+
+![quite the situation](../images/img_full_46963.png)
+
+only in this case it's the magnetic field that is 'moving' (actually changing). The movement of the bar PQ in the linked image causes a force on the charged particles inside it, from the right hand rule this force acts from P to Q for positively charged particles and from Q to P for negative ones.
 
 If we go a little deeper, we find that we can express the force per unit charge as 
 

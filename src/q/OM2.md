@@ -14,7 +14,7 @@ At the perihadion you want to reduce your speed and therefore burn your rockets 
 
 Now, how did we get to Pluto? The most efficient\* way to transfer between (dwarf) planets is to use a Hohmann transfer. This is a general technique for transfering between circular orbits by coasting along an elliptical orbit tangent to both.
 
-![](http://ccar.colorado.edu/asen5050/projects/projects_2008/pozzi_project/index_files/image010.jpg)
+![](../images/image010.jpg)
 
 at point $a$ you give yourself a boost $\Delta v_a$ to set yourself in the elliptical transfer orbit. Then at $\Delta v_b$ you again boost yourself to "widen" your orbit up to the bigger circular target orbit.
 
