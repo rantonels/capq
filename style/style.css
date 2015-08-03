@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: #f7f6f7;
   font-family: Georgia, Palatino, serif;
   color: #000000;
   font-size: 18px;
@@ -38,7 +38,7 @@ h6 {
   font-variant: small-caps;
 }
 a {
-  color: #1f8aa7;
+  color: #59b4a4;
   margin: 0;
   padding: 0;
   vertical-align: baseline;
@@ -46,7 +46,7 @@ a {
   font-weight: bold;
 }
 a:hover {
-  color: #1f8aa7;
+  color: #59b4a4;
   text-decoration: none;
 }
 pre {
@@ -115,8 +115,8 @@ hr {
 .titlebar {
   padding-bottom: 50px;
   padding-top: 50px;
-  background: #fbf18e;
-  color: #373737;
+  background: #573855;
+  color: #f7f6f7;
 }
 .titlebar h1 {
   font-weight: normal;
@@ -124,9 +124,10 @@ hr {
 .titlebar h2 {
   font-weight: bold;
   font-style: italic;
+  color: #f7f6f7;
 }
 .qheader {
-  background: #fbf18e;
+  background: #573855;
   padding: 10px;
 }
 .questionbody h1 {
@@ -145,10 +146,10 @@ hr {
   font-style: italic;
 }
 .toc a:hover {
-  background-color: #FBF18E;
+  background-color: #f9c07a;
 }
 .toc h2 {
-  color: #1f8aa7;
+  color: #59b4a4;
 }
 .buttons {
   font-size: 380%;
@@ -156,8 +157,8 @@ hr {
 }
 .buttons a {
   font-weight: normal;
-  color: #1f8aa7;
+  color: #59b4a4;
 }
 .buttons a:hover {
-  color: #fbf18e;
+  color: #573855;
 }

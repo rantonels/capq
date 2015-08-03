@@ -1,10 +1,14 @@
 @dgray: #333333;
-@lblue: #1F8AA7;
-@bright: #FBF18E;
+@lblue: #59B4A4;
+@bright: #573855;
 @def:#000000;
+@background:#F7F6F7;
+@highlight:#F9C07A;
+
+@title:@background;
 
 body{
-    background-color:white;
+    background-color:@background;
 
      font-family:Georgia, Palatino, serif;
     color: @def;
@@ -159,7 +163,7 @@ img.center {
 	padding-bottom: 50px;
 	padding-top: 50px;
 	background: @bright;
-	color: #373737;
+	color: @title;
 }
 
 .titlebar h1 {
@@ -169,6 +173,7 @@ img.center {
 .titlebar h2 {
 	font-weight: bold;
 	font-style:italic;
+	color:@title;
 }
 
 .qheader {
@@ -196,7 +201,7 @@ img.center {
 }
 
 .toc a:hover {
-	background-color: #FBF18E;
+	background-color: @highlight;
 }
 
 .toc h2 {
