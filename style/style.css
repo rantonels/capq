@@ -49,12 +49,14 @@ h1, h2, h3, h4 {
 
 h2, h3, h4, h5, p {
     padding: 0;
+    color: #333333;
 }
 
 h1 {
 /    font-size:150%;
 /    padding: 0px;
-    font-variant:small-caps;
+/    font-variant:small-caps;
+    color: #333333;
 }
 
 h2 {
@@ -88,9 +90,10 @@ a {
     padding: 0;
     vertical-align: baseline;
     text-decoration:none;
+    font-weight: bold;
 }
 a:hover {
-/    color: #e05151;
+    color: #1f8aa7;
 	text-decoration:none;
 }
 a:visited {
@@ -202,21 +205,47 @@ img.center {
 	padding-bottom: 50px;
 	padding-top: 50px;
 	background: #FBF18E;
+	color: #373737;
+}
+
+.titlebar h1 {
+	font-weight: normal;
+}
+
+.titlebar h2 {
+	font-weight: bold;
+	font-style:italic;
 }
 
 .qheader {
 	background: #FBF18E;
+	padding: 10px;
+}
+
+.questionbody h1 {
+	margin-bottom: 60px;
+	margin-top:50px;
 }
 
 .toc {
 	padding-top:30px;
 /	background: #6ab8ce;
-	background: white;
+/	background: white;
 /	color: #fbf18e;
+}
+
+.toc p {
+	margin-left: 4%;
 }
 
 .toc a {
 	color: #333333;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.toc a:hover {
+	background-color: #FBF18E;
 }
 
 .toc h2 {
@@ -224,9 +253,23 @@ img.center {
 }
 
 .introduction {
-	background: white;
+/	background: white;
 }
 
 .downloadpanel {
-	background: white;
+/	background: white;
+}
+
+.buttons {
+	font-size:380%;
+	padding:20px;
+}
+
+.buttons a {
+	font-weight:normal;
+	color: #1f8aa7;
+}
+
+.buttons a:hover {
+	color: #FBF18E;
 }
