@@ -1,275 +1,163 @@
-body{
-/    margin: 0 auto;
-    background-color:white;
-
-/*	--------- FONT FAMILY --------
- 	following are some optional font families. Usually a family 
-	is safer to choose than a specific font, 
-	which may not be on the users computer		*/
-     font-family:Georgia, Palatino, serif;
-/    font-family:"Book Antiqua", Palatino, serif;
-/    font-family:Arial, Helvetica, sans-serif;
-/    font-family:Tahoma, Verdana, Geneva, sans-serif;
-/    font-family:Courier, monospace;
-/    font-family:"Times New Roman", Times, serif;
-/    font-family:"Quattrocento",serif;
-
-/*	-------------- COLOR OPTIONS ------------
- 	following are additional color options for base font
-	you could uncomment another one to easily change the base color 
-	or add one to a specific element style below         */		
-/    color: #333333; /* dark gray not black */
-    color: #000000; /* black */
-/    color: #666666; /* medium gray  black */	
-/    color: #E3E3E3; /* very light gray */
-/    color: white; 
-
-/    line-height: 1;
-/    max-width: 960px;
-/    max-width: 800px;
-/    padding: 30px;
-    font-size: 18px;
+body {
+  background-color: white;
+  font-family: Georgia, Palatino, serif;
+  color: #000000;
+  font-size: 18px;
 }
-
-
-p   {
-/    font-size: 22px;
-    line-height: 150%;
-/    max-width: 540px;
-/    max-width: 960px;
-    font-weight: 400;
-     color: #333333;
-     text-align: justify;
+p {
+  line-height: 150%;
+  font-weight: 400;
+  color: #333333;
+  text-align: justify;
 }
-
-h1, h2, h3, h4 {
-/    color: #111111;
-    font-weight: 400;
-}
-
-h2, h3, h4, h5, p {
-    padding: 0;
-    color: #333333;
-}
-
-h1 {
-/    font-size:150%;
-/    padding: 0px;
-/    font-variant:small-caps;
-    color: #333333;
-}
-
-h2 {
-/    font-size:130%;
-}
-
-h3 {
-/    font-size:100%;
-/    margin-top: 50px;
-}
+h1,
+h2,
+h3,
 h4 {
-/    font-size:100%
-/    font-variant:small-caps;
-
+  font-weight: 400;
+}
+h2,
+h3,
+h4,
+h5,
+p {
+  padding: 0;
+  color: #333333;
+}
+h1 {
+  color: #333333;
 }
 h5 {
-    font-size:80%
-    font-weight: 100;
+  font-size: 80%;
+  font-weight: 100;
 }
-
 h6 {
-    font-size:80%
-    font-weight: 100;
-    color:red;
-    font-variant:small-caps;
+  font-size: 80%;
+  font-weight: 100;
+  color: red;
+  font-variant: small-caps;
 }
 a {
-/    color: #007a9d;
-    color: #1f8aa7;
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
-    text-decoration:none;
-    font-weight: bold;
+  color: #1f8aa7;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+  font-weight: bold;
 }
 a:hover {
-    color: #1f8aa7;
-	text-decoration:none;
+  color: #1f8aa7;
+  text-decoration: none;
 }
-a:visited {
-/    color: black;
-}
-ul, ol {
-/    padding: 0;
-/    margin: 0px 0px 0px 4%;
-}
-ul {
-/    list-style-type: square;
-/    list-style-position: inside;
-
-}
-
-li {
-/     line-height:150%    
-}
-li ul, li ul {
-/    margin-left: 6%;
-}
-
 pre {
-    padding: 0px 24px;
-    max-width: 800px;
-    white-space: pre-wrap;
+  padding: 0px 24px;
+  max-width: 800px;
+  white-space: pre-wrap;
 }
 code {
-    font-family: Consolas, Monaco, Andale Mono, monospace;
-    line-height: 1.5;
-    font-size: 13px;
+  font-family: Consolas, Monaco, Andale Mono, monospace;
+  line-height: 1.5;
+  font-size: 13px;
 }
 aside {
-    display: block;
-    float: right;
-    width: 390px;
+  display: block;
+  float: right;
+  width: 390px;
 }
 blockquote {
-    border-left:.5em solid #eee;
-    padding: 0 1em;
-    margin-left:0;
-    max-width: 700px;
+  border-left: .5em solid #eee;
+  padding: 0 1em;
+  margin-left: 0;
+  max-width: 700px;
 }
-blockquote  cite {
- /   font-size:14px;
-    line-height:20px;
-    color:#bfbfbf;
+blockquote cite {
+  line-height: 20px;
+  color: #bfbfbf;
 }
 blockquote cite:before {
-    content: '\2014 \00A0';
+  content: '\2014 \00A0';
 }
-
-blockquote p {  
-    color: #666;
-    max-width: 650px;
+blockquote p {
+  color: #666;
+  max-width: 650px;
 }
 hr {
-/    width: 540px;
-    text-align: left;
-    margin: 0 auto 0 0;
-    color: #999;
+  text-align: left;
+  margin: 0 auto 0 0;
+  color: #999;
 }
-
-/*from now on added by me */
-
 .version {
-	font-size:14px;
-	text-align:right;
-	color: #999;
+  font-size: 14px;
+  text-align: right;
+  color: #999;
 }
-
 .bigtitle {
-	margin-top: 0px;
-	margin-bottom:80px;
-	font-size:70px;
+  margin-top: 0px;
+  margin-bottom: 80px;
+  font-size: 70px;
 }
-.pretitle{
-	margin-bottom: 5px;
-	margin-top: 100px;
+.pretitle {
+  margin-bottom: 5px;
+  margin-top: 100px;
 }
-
-img.center {
-/	display: block;
-/	margin-left:auto;
-/	margin-right:auto;
-}
-
 .figure img {
-	display: block;
-	margin-left:auto;
-	margin-right:auto;
-/
-/	vertical-align: middle;
-/	margin: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.figure{
-	margin-top: 15px;
-	margin-bottom: 15px;
-/	margin: 0 auto;
-/	display:block;
+.figure {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
-
 .caption {
-	text-align:center;
+  text-align: center;
 }
-
 .titlebar {
-	padding-bottom: 50px;
-	padding-top: 50px;
-	background: #FBF18E;
-	color: #373737;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  background: #fbf18e;
+  color: #373737;
 }
-
 .titlebar h1 {
-	font-weight: normal;
+  font-weight: normal;
 }
-
 .titlebar h2 {
-	font-weight: bold;
-	font-style:italic;
+  font-weight: bold;
+  font-style: italic;
 }
-
 .qheader {
-	background: #FBF18E;
-	padding: 10px;
+  background: #fbf18e;
+  padding: 10px;
 }
-
 .questionbody h1 {
-	margin-bottom: 60px;
-	margin-top:50px;
+  margin-bottom: 60px;
+  margin-top: 50px;
 }
-
 .toc {
-	padding-top:30px;
-/	background: #6ab8ce;
-/	background: white;
-/	color: #fbf18e;
+  padding-top: 30px;
 }
-
 .toc p {
-	margin-left: 4%;
+  margin-left: 4%;
 }
-
 .toc a {
-	color: #333333;
-	font-weight: normal;
-	font-style: italic;
+  color: #333333;
+  font-weight: normal;
+  font-style: italic;
 }
-
 .toc a:hover {
-	background-color: #FBF18E;
+  background-color: #FBF18E;
 }
-
 .toc h2 {
-	color: #1f8aa7;
+  color: #1f8aa7;
 }
-
-.introduction {
-/	background: white;
-}
-
-.downloadpanel {
-/	background: white;
-}
-
 .buttons {
-	font-size:380%;
-	padding:20px;
+  font-size: 380%;
+  padding: 20px;
 }
-
 .buttons a {
-	font-weight:normal;
-	color: #1f8aa7;
+  font-weight: normal;
+  color: #1f8aa7;
 }
-
 .buttons a:hover {
-	color: #FBF18E;
+  color: #fbf18e;
 }

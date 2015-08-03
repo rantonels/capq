@@ -8,7 +8,7 @@ IMAGES=images/pluto_types.svg images/pluto_scatter.svg
 
 all: web tex/capq-booklet.pdf
 
-web: index.html $(HTMLS) src/builder.py
+web: index.html $(HTMLS) src/builder.py style/style.css
 
 
 toc.md:		src/builder.py
@@ -60,6 +60,9 @@ q/%.html : src/q/%.md style/questionlayout.html images
 src/fullsource.md: $(wildcard src/q/*) src/builder.py
 	src/builder.py joined_source > src/fullsource.md	 
 
+
+style/style.css: style/style.less
+	lessc style/style.less > style/style.css
 
 
 clean:
