@@ -41,10 +41,12 @@ categories = {
     'HEP':(120,'Particle Physics/High Energy Physics',[
             "HEP1",
             "HEP2",
-            "HEP3"
+            "HEP3",
+            "HEP4"
             ]),
     'QG':(130,'Quantum Gravity/String Theory',[
-            "QG1"
+            "QG1",
+            "QG2"
         ]),
 
     'CP':(1000,'List of well-known crackpots',[

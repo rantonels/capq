@@ -1045,10 +1045,83 @@ To derive exactly that $\Phi$ has no unwanted pole and how exactly $e(q^2)$ runs
 
 
 
+### HEP4 - Is the electron a point particle, or an extended object? How sure are we of that?
+
+It's most likely a point particle. Basically all leptons and quarks including the electrons have experimental upper bounds on their structural size of $10^{-18} \,\mathrm{m}$, corresponding to energies of around $200\, \mathrm{GeV}$ (remember that in natural units, scales of length and energy are equivalent). These are obtained by studying the scattering amplitudes in accelerators. If a particle is composite, or generally an extended object with inner structure, this *will* necessarily show as a deviation of the scattering cross sections as computed in the standard theory as you probe energies on the order of the structural sizes. This is indeed observed for composite particles such as hadrons, that require the introduction of "form factors" in scattering cross-sections to account for the fact that they have an internal structure that can matter in the collision.
+
+Now, from this upper limit, we can actually deduce that it's very, very unlikely for the electron to be extended. Assume the electron is a composite/extended object made of some subcomponents (preons). The preons must be confined by some force in a space of order *at most* $10^{-18} \,\mathrm{m}$; by Heisenberg's uncertainty principle, they must have momenta/energies of *at least* around $200\, \mathrm{GeV}$. However the total energy in the electron is $0.5 \,\mathrm{MeV}$, because that is the electron mass we observe. Therefore we must have that the energies of the preons must be cancelled by the (negative) binding energy of the force, which would also be of the same order of magnitude.
+
+So you must have two energies, arising from complex, involved dynamics with many corrections of various origins, both on the general order of $200 \,\mathrm{GeV}$, that cancel almost perfectly as
+
+$$\large( \text{preon energy, order }200 \,\mathrm{GeV} \large) - (\text{binding energy, order }200\,\mathrm{Gev}) = 0.0005 \,\mathrm{GeV}$$
+
+that's what we call a fine-tuning problem. It's really unlikely that this randomly occurs by coincidence, and for all the leptons and quarks. Therefore electron, or in general lepton/quark compositeness is greatly disfavoured. As our bounds on the size get better, this problem gets worse and worse.
+
+Now, there is a caveat. It's possible in general that a fine-tuning problem can be solved by symmetries; a particular symmetry can make such that the miracolous cancellation we need is actually predicted by the theory, not left to chance. (For example, supersymmetry solves the fine-tuning of quantum corrections to the Higgs' mass in the SM by imposing that a particular cancellation actually must occur). However, I don't think there's anything of the sort viable for preon models.
+
+
 #Quantum Gravity/String Theory
 ### QG1 - If the Planck length/Planck time is the smallest measurable/possible length/time, then...? 
 
 *to answer.*
+
+
+### QG2 - since the electron is a point mass, is it a black hole?
+
+This is an interesting question that many other important people have asked themselves (google "black hole electron"); the answer is roughly that it most likely isn't a black hole or like a black hole, but interesting discussion stems from the question.
+
+Basically, the Schwarzschild (event horizon) radius for a black hole is proportional to its mass. Precisely
+
+$$R = 2GM/c^2$$
+
+in natural units ($c=1$, $\hbar=1$, $4\pi\epsilon_0 = 1$)
+
+$$R = 2 GM$$
+
+G is Newton's gravitational constant. Natural units are really fun and in them G defines a particular scale, called the Planck scale, which is the natural scale for quantum gravity. For example, Planck's mass is
+
+$$m_P = G^{-1/2}$$
+
+and the Planck length (or time! $c=1$) is the reciprocal
+
+$$l_P = G^{1/2} = t_P$$
+
+with this, our original formula for the Schwarzschild radius can be written as
+
+$$R = 2 l_P (M/m_P)$$
+
+very interesting: this means that the Schwarzschild radius for a Planck-mass black hole is around a Planck length (actually $2$, but those pesky factors don't really matter at all).
+
+But a Planck mass is a few micrograms. An electron is much, much, much lighter. Our black hole electron has an extremely small $M/m_P$ ratio and so an extremely small Schwarzschild radius compared to the Planck length. 
+
+But wait, there's more. Consider the evaporation time of a black hole through Hawking radiation. Apart from stupid dimensionless constants, this is
+
+$$t = G^2 M^3 / (\hbar  c^4 )$$
+
+in natural units
+
+$$t = G^2 M^3 = t_P (M/m_P)^3$$
+
+ok, so the evaporation time of a Planck-mass sized black hole is about a Planck time. Again, our BH electron would have an evaporation time ridiculously small compared to the Planck time.
+
+What is the issue with all of the above? It's that the black hole electron lives in a regime where the theories we used (classical and semiclassical general relativity) to compute all these nice things about black holes (such as the fact that they exist, that they have this radius, and that they evaporate in this time) simply do not apply. In fact, the regime itself possibly does not even exist!
+
+Classical general relativity becomes inaccurate as we reach the Planck scale. There, quantum gravity (which is an unknown theory) takes its place. What is certain is that at/beyond the Planck scale, classical spacetime stops making sense. It is therefore most reasonable to imagine it is a good estimate for the smallest possible size of a black hole, which is a feature of classical spacetime. In quantum spacetime, geometric measurements such as those performed with rulers and clock will be affected by the rules of quantum mechanics and the geometry becomes quantized itself. (**N.B.: quantized does not mean discretized!!** See [QG1](QG1.html))
+
+The black hole electron is well beyond that, and therefore it doesn't make sense.
+
+There's another curious occurrence for the black hole electron if we insist on using classical general relativity on it. The electron has both a charge and an intrinsic angular momentum (spin). Therefore, it wouldn't be a Schwarzschild black hole as we simplified above, but a charged spinning black hole, a Kerr-Newman black hole (wikipedia incorrectly reports Reissner–Nordström, forgetting about the spin). However, it's important for charged black hole that "the charge is less than the mass". Precisely
+
+$$Q < G^{-1/2} M$$
+
+(in Planck units, with $G=1$, this would be $Q < M$)
+
+Black holes which satisfy this requirement are realistic and are called subextremal. Black holes violating this bound (with too large a $Q$) are called superextremal, are not thought to be possible, and are violently unstable. Superextremal black holes would require a negative mass density to be created and have a repulsive naked singularity.
+
+You can imagine where I'm going: the electron would indeed be superextremal, having a larger charge than mass in Planck units. It would still be a very bizzare object from the point of view of general relativity.
+
+
+So what actually happens in the real world? What happens is that as you get closer and closer to the electron to measure its gravitational field, you end up hitting the Planck scale before you are able to measure anything, and then you just cannot zoom further, because it doesn't make any sense.
 
 
 #List of well-known crackpots

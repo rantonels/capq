@@ -56,9 +56,13 @@
 
 [HEP3 - Why do photons not acquire a mass through quantum corrections/interaction with virtual particles? What is charge renormalization?](q/HEP3.html)
 
+[HEP4 - Is the electron a point particle, or an extended object? How sure are we of that?](q/HEP4.html)
+
 ## Quantum Gravity/String Theory
 
 [QG1 - If the Planck length/Planck time is the smallest measurable/possible length/time, then...?](q/QG1.html)
+
+[QG2 - since the electron is a point mass, is it a black hole?](q/QG2.html)
 
 ## List of well-known crackpots
 
