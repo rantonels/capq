@@ -22,7 +22,7 @@ index.html:	toc.md src/preamble.html style/layout.html images style/header.html
 		--include-before-body="src/preamble.html" \
 		--css $(CSS) \
 		-s  \
-		--mathjax \
+		--mathjax="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" \
 		-V version="$(COMMIT)" \
 		--default-image-extension=svg \
 		-o index.html
@@ -50,7 +50,7 @@ images/pdf: images/feynman images
 
 q/%.html : src/q/%.md style/questionlayout.html images
 	pandoc $< \
-		--mathjax \
+		--mathjax="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" \
 		-s \
 		--default-image-extension=svg \
 		--template "style/questionlayout.html" \

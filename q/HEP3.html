@@ -33,18 +33,19 @@
 		<h1 id="hep3---why-do-photons-not-acquire-a-mass-through-quantum-correctionsinteraction-with-virtual-particles-what-is-charge-renormalization">HEP3 - Why do photons not acquire a mass through quantum corrections/interaction with virtual particles? What is charge renormalization?</h1>
 <p>The short answer is that quantum corrections to the photon propagator do not give it a mass because of the Ward identity, which is a consequence of gauge invariance.</p>
 <p>The probability amplitude for a photon to go from point A to point B is given by what is called the propagator. The &quot;bare&quot; propagator is given by the following expression:</p>
-<p><img src="../images/bare.svg" title="bare" /> <span class="math">\(= \pi^{\mu\nu}(q) = \frac{-ig^{\mu\nu} }{q^2 + i\epsilon} \)</span></p>
+<p><img src="../images/bare.svg" title="bare" /> $= ^{}(q) =  $</p>
 <p>where <span class="math">\(q\)</span> is the four-momentum of the photon and <span class="math">\(\epsilon\)</span> is a funny thing you shouldn't worry about. In fact, put it to 0. This is how a massless propagator should look. The mass of the particle is given by where the propagator is singular (has a pole), so in this case <span class="math">\(q^2 = m^2 = 0\)</span>. (If the photon was massive, in the denominator we would have <span class="math">\(q^2-m_\gamma^2 + i \epsilon\)</span>). The propagator has two Lorentz indices <span class="math">\(\mu\)</span> and <span class="math">\(\nu\)</span> because the photon has a polarization. To get the probability amplitude, you actually have to contract the indices of the propagator with your desired polarization <span class="math">\(\varepsilon_\mu\)</span></p>
 <p>But this is just the bare propagator, this is all tree-level. We want to compute what happens to the propagator when we include higher-order corrections. More practically: the fact that a photon can produce a virtual electron-positron pair, which then reannihilate into a photon, as such:</p>
 <div class="figure">
 <img src="../images/one-floop.svg" title="one-loop" />
+
 </div>
 <p><em>should</em> affect the probability of the photon going from point A to point B. In fact, when summing over all possible diagrams for the <span class="math">\(\gamma\rightarrow \gamma\)</span> process:</p>
-<p><span class="math">\(\Pi(q) = \)</span> <img src="../images/dressed.svg" title="dressed" /> <span class="math">\(=\)</span> <img src="../images/bare.svg" /> <span class="math">\(+\)</span> <img src="../images/one-floop.svg" /> <span class="math">\(+\)</span> <img src="../images/bibubble.svg" /> <span class="math">\(+\)</span> <img src="../images/twobubble.svg" /> <span class="math">\(+ \ldots\)</span></p>
+<p>$(q) = $ <img src="../images/dressed.svg" title="dressed" /> <span class="math">\(=\)</span> <img src="../images/bare.svg" /> <span class="math">\(+\)</span> <img src="../images/one-floop.svg" /> <span class="math">\(+\)</span> <img src="../images/bibubble.svg" /> <span class="math">\(+\)</span> <img src="../images/twobubble.svg" /> <span class="math">\(+ \ldots\)</span></p>
 <p>we should get the &quot;dressed&quot;, or physical propagator <span class="math">\(\Pi^{\mu\nu}\)</span>. (A quick review of Feynman diagrams: time goes from left to right, wavy lines are photons, solid lines going right are electrons, left are positrons). Now we want to rearrange the terms of the previous series. Call a diagram one-particle-irreducible (1PI) if you cannot split it in two by cutting one of the internal lines (the two wavy lines at the beginning and end don't count). For example, the following diagrams are respectively 1PI and not 1PI.</p>
 <p><img src="../images/yesp.svg" />, <img src="../images/twobubble.svg" /></p>
 <p>Now consider the sum of all 1PI diagrams in the original series, and denote it as:</p>
-<p><span class="math">\(S = \)</span> <img src="../images/onepee.svg" /></p>
+<p>$S = $ <img src="../images/onepee.svg" /></p>
 <p>My claim is that the full series of all diagrams for the photon propagator is equal to:</p>
 <p><img src="../images/dressed.svg" /> <span class="math">\(=\)</span> <img src="../images/bare.svg" /> <span class="math">\(+\)</span> <img src="../images/onepee.svg" /> <span class="math">\(+\)</span> <img src="../images/twopee.svg" /> <span class="math">\(+\)</span> <img src="../images/threepee.svg" /> <span class="math">\(+ \ldots\)</span></p>
 <p>This is actually really simple. Think about it.</p>

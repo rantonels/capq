@@ -34,6 +34,7 @@
 <p>Assume we are placed at a certain height <span class="math">\(r_p\)</span> above the Earth, well outside the atmosphere. Give ourselves a velocity <span class="math">\(\vec v_0\)</span> orthogonal to the Earth-us ray vector. Assume the Earth was spherical and homogeneous, the Sun's effect were negligible and that there was no moon (how's that for simplification?). Then we know from Kepler that our possible trajectories are conic sections (ellipses, parabolas, or hyperbolas) with a focus on the Earth. We also know that our velocity is tangent to our trajectory (from standard kinematics). However, there are multiple conic sections with a focus on the Earth, passing through our current position and tangent to our velocity, as the following diagram shows:</p>
 <div class="figure">
 <img src="../images/earth_orbits.png" />
+
 </div>
 <p>Exactly which conic section we'll follow by coasting in Earth's gravity is dependent on the modulus of our initial velocity. Namely, if <span class="math">\(v_0\)</span> was equal to the velocity needed for a circular orbit (which is <span class="math">\(\sqrt{\frac{GM_\oplus}{r_p} }\)</span>) the orbit would be obviously a circle; if it was slightly more, the orbit would start to get elliptical.</p>
 <p>In the elliptical case, our starting position is the closest approach to Earth (the perigee) and antipodally we would find a farthest point, the apogee, where again the velocity is orthogonal to the radius vector.</p>
@@ -64,7 +65,8 @@
 <p>and so <span class="math">\(V\)</span> is both a function of spacecraft position <span class="math">\(r\)</span> <em>and</em> time <span class="math">\(t\)</span>, through the position of the planet. In general, if there are multiple astronomical bodies involved, it's pretty unlikely they'd just stand there; typically they would set into orbits themselves. Then when studying the dynamics of a spacecraft coasting in such a landscape we would certainly recognize violations of conservation of the momentum and energy of the spacecraft, as these quantitites are exchanged with the astronomical bodies.</p>
 <p>Now, let's take a look at our hyperbolic encounter from another perspective. Let's zoom back:</p>
 <div class="figure">
-<img src="../images/pluto_scatter.svg" alt="you can actually hear the &#39;thump&#39; sound" /><p class="caption">you can actually hear the 'thump' sound</p>
+<img src="../images/pluto_scatter.svg" alt="you can actually hear the &#39;thump&#39; sound" />
+<p class="caption">you can actually hear the 'thump' sound</p>
 </div>
 <p>That's interesting. It looks like the spacecraft has <em>bounced</em> on the planet. In fact it acted <em>precisely</em> like a ball bouncing on another, very massive, ball in an elastic collision would. This is why a fly-by or an encounter can also be seen as an elastic collison or an elastic scattering. Basically by zooming out we've discarded all (for now) superfluous information on the specific hour-by-hour details of the encounter and reduced ourselves to the relevant information over the course of months: the spacecraft approaches the planet with constant velocity <span class="math">\(\vec v_i\)</span>, interacts with the planet at a discrete event where it's given a change in velocity <span class="math">\(\Delta \vec v\)</span>, and exits with constant velocity <span class="math">\(\vec v_f\)</span>.</p>
 <p>Note that we've gotten a <span class="math">\(\Delta \vec v\)</span>, but not a <span class="math">\(\Delta v\)</span>, which is what we are interested in in space travel. To tackle this we zoom out a little more, until the Sun comes into the stage.</p>
@@ -84,6 +86,7 @@
 <p>which is precisely the <span class="math">\(\Delta v\)</span> we wanted. In the Sun frame, we can gain or lose velocity (and therefore energy) by &quot;bouncing&quot; on planets, in effect having close encounters.</p>
 <div class="figure">
 <img src="../images/encounter.png" />
+
 </div>
 <p>To understand the reasoning behind this apparently free lunch, consider as an analogy the simple case of a ball bouncing on a stationary, infinitely stiff and massive wall. By bouncing elastically on the wall, the ball only changes the direction of its speed, not the magnitude, so it cannot extract energy from the wall (but it can change its momentum).</p>
 <p>However, changing reference frame, the wall is moving. When the ball and wall hit, the wall can impart energy to the ball.</p>

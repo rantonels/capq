@@ -216,7 +216,7 @@ This speed is not gigantic for mm-distant atoms. *But*:
 
 The energy imparted on the atom is
 
-$E = \frac{1}{2} m K^2 \frac{1}{b} $
+$$E = \frac{1}{2} m K^2 \frac{1}{b} $$
 
 and it's no big deal to use this formula as a good order-of-magnitude estimate also in the relativistic small-$b$ regime. I use as $m$ the oxygen atom mass. At one nanometre distance the energy is around
 
@@ -226,7 +226,7 @@ which is pretty large, absolutely relativistic in fact. (The rest energy of Oxyg
 
 $$ E_T = \int_\text{assume a cylindrical human} dV \,n \,E(b)  = \frac{nmK^2}{2} \int_\epsilon^R L \, 2\pi b \,db \, \frac{1}{b^2} $$
 
-I've used cilindrical coordinates centered on the trajectory. I cannot integrate the impact parameter to 0 because that would make the integral divergent. However, we have a physical cutoff: under the ångström scale the material is not uniform. No atoms will in general be closer to the black hole than an ångström; the spacing itself between atoms is surely larger than the atoms themselves. So we set $\epsilon = 1 \overset{\circ}{A} $. This is justified because the integral is only logarithmically divergent:
+I've used cilindrical coordinates centered on the trajectory. I cannot integrate the impact parameter to 0 because that would make the integral divergent. However, we have a physical cutoff: under the ångström scale the material is not uniform. No atoms will in general be closer to the black hole than an ångström; the spacing itself between atoms is surely larger than the atoms themselves. So we set $\epsilon = 1 \overset{\circ}{A}$. This is justified because the integral is only logarithmically divergent:
 
 $$ E_T = \pi L n m K^2 \,\ln \left(\frac{1 \mathrm{m}}{1 \overset{\circ}{A}}\right) $$
 
@@ -769,6 +769,49 @@ Note that the previous expressions $E = \gamma(v) m c^2$ and $p = \beta(v)\gamma
 
 
 #General Relativity
+### GR1 - How long does a year on Mercury last from Mercury's point of view?
+
+The relativistic effects are very small, but not *that* small, let's compute them explicitly, it's a good exercise.
+
+Basically the first thing you would think of would be to just compose the gravitational time dilation with the special-relativistic "doppler" time dilation; what you would get in this particular case would not be wrong, but it's not correct to assume a priori that such a thing makes sense. Therefore let's just do the whole calculation and then check that it's ok.
+
+The metric for a weak static field such as that of the sun is given by $g_{00} = - (1 + 2 \Phi)$ where $\Phi$ is the gravitational potential and all other components are equal to the flat space ones ($g_{\mu\nu} = \eta_{\mu\nu}$ for all other indices). Placing Mercury at position (R,0,0) and velocity (meaning $dx^i/dt$ with t coordinate time) (0,V,0) then let's write down $\frac{dx^\mu}{dt}$ (which is not a vector, because t is not a scalar):
+
+$$ (1,0,V,0) $$
+
+pretty self-explanatory. Then the four velocity $u^\mu$ must be proportional to this thing, but also be normalized as $u^\mu u_\mu = - 1$. Then taking the square of the above "vector" (using the metric), we get $- (1+2\Phi) + v^2$, meaning our 4-velocity is actually:
+
+$$ u^\mu = (1 + 2\Phi - v^2)^{-1/2} (1,0,V,0) $$
+
+that's very useful, because we can read the time dilation factor as the 0 component of $u$:
+
+$$ u^0 = \frac{dt}{d\tau} = \frac{1}{\sqrt {1+2\Phi-v^2 }} $$
+
+notice the similarity with the usual Doppler time dilation gamma factor; the only addition is the gravitational potential. Since we are talking about very small stuff, we can Taylor-expand:
+
+$$ \sim 1 - \Phi + \frac{V^2}{2} \rightarrow 1 + \frac{1}{c^2} (-\Phi + V^2/2) $$
+
+Which is exactly what we would get by composing / summing gravitational and SR time dilation - so we see that this operation is only lecit in the limit of small $\Phi$ and $V$. I've reintroduced factors of $c$.
+
+One could now substitute the orbital radius and velocity of Mercury (assuming a circular orbit, which is wrong for Mercury but w/e) and get the answer but there's an important simplification: Mercury is in orbit! Therefore:
+
+$$ \frac{1}{2} m V^2 = \frac{G m M}{2R} $$
+
+that's actually equivalent to Newton's law as you can readily check and takes the name of virial theorem. Helps a lot because our time dilation factor becomes:
+
+$$ u^0 = 1 + \frac{1}{c^2} \left( \frac{GM}{R} + \frac{V^2}{2} \right) = 1 + \frac{3}{2} \frac{1}{c^2} \frac{GM}{R} $$
+
+So our time dilation factor ends up being
+
+$$ 1 + 5 \cdot 10^{-8} $$
+
+meaning that over a Mercurian year of 87 days an observer on Mercury would measure around 0.3 seconds less of proper time.
+
+
+
+
+
+
 #General Quantum Field Theory/Many Body/Relativistic QM
 #Nuclear Physics
 #Quantum Electrodynamics

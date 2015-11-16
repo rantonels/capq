@@ -34,32 +34,32 @@
 <p><em>note: do not confuse this with the Maxwell tensor <span class="math">\(F^{\mu\nu}\)</span>, which is the electromagnetic field.</em></p>
 <p>Consider linear momentum:</p>
 <p><span class="math">\[ P^i \]</span></p>
-<p>it's the i component of the total linear momentum in the system. It will be an integral over space of some linear momentum density I'll call <span class="math">\(p^i \)</span>:</p>
+<p>it's the i component of the total linear momentum in the system. It will be an integral over space of some linear momentum density I'll call $p^i $:</p>
 <p><span class="math">\[ P^i = \int d^3 x \; p^i(x) \]</span></p>
 <p>This quantity is conserved. It's also pretty reasonable that it's somewhat conserved <em>locally</em>, meaning that it doesn't just disappear somewhere and reappear magically somewhere else, it has to <em>flow</em>.</p>
 <p>What I mean is that if the amount of linear momentum in a certain region of space changes, it must be because of some flux in/out the surface of that region:</p>
 <p><span class="math">\[ \frac{d}{dt} P_V^i = \int_V d^3 x \frac{d}{d t} p^i(x) = - \oint_{\partial V} d^2 \vec \Sigma \; \cdot \vec \Phi^i \]</span></p>
-<p>I just wrote that the variation of <span class="math">\(P_V^i \)</span> (<span class="math">\(P^i\)</span> restricted to the volume V), which is equal to the integral of the variation of the density, must be counterbalanced by some flux <span class="math">\(\vec\Phi \)</span> that crosses the boundary <span class="math">\(\partial V \)</span>. If it's decreasing, then it must be leaking.</p>
-<p>Now here's the thing: the stress tensor element <span class="math">\(\sigma_{ij} \)</span> is precisely the <em>flux of <span class="math">\(P^i\)</span> in the j direction</em>. It's how much <span class="math">\(P^i \)</span> is flowing through a unit surface orthogonal to the <span class="math">\(j\)</span>-direction. It is also symmetric (nontrivial, and in fact dependent on some choices) and it does transform like a 2-tensor, a matrix, which justifies the name.</p>
+<p>I just wrote that the variation of $P_V^i $ (<span class="math">\(P^i\)</span> restricted to the volume V), which is equal to the integral of the variation of the density, must be counterbalanced by some flux $$ that crosses the boundary $V $. If it's decreasing, then it must be leaking.</p>
+<p>Now here's the thing: the stress tensor element $_{ij} $ is precisely the <em>flux of <span class="math">\(P^i\)</span> in the j direction</em>. It's how much $P^i $ is flowing through a unit surface orthogonal to the <span class="math">\(j\)</span>-direction. It is also symmetric (nontrivial, and in fact dependent on some choices) and it does transform like a 2-tensor, a matrix, which justifies the name.</p>
 <p>So let's rewrite what we had:</p>
 <p><span class="math">\[ \int_V d^3 x \frac{d}{dt} p^i = - \oint_{\partial V} d^2 \Sigma^j \; \sigma^{ij} \]</span></p>
 <p>What I've done is:</p>
 <ul>
-<li>Rewritten the scalar product <span class="math">\(\vec \Sigma \cdot \vec \Phi^i \)</span> using indices as <span class="math">\(\Sigma^j \Phi^{ij} \)</span>. Be careful about these indices: i means which component of the momentum we're talking about, j is the vector index of the flux itself (which is a vector).</li>
-<li>Recognized that <span class="math">\(\Phi^{ij} = \sigma^{ij} \)</span> from what we said earlier.</li>
+<li>Rewritten the scalar product $^i $ using indices as $^j ^{ij} $. Be careful about these indices: i means which component of the momentum we're talking about, j is the vector index of the flux itself (which is a vector).</li>
+<li>Recognized that $^{ij} = ^{ij} $ from what we said earlier.</li>
 </ul>
 <p>Now what you would like to do is to deduce a differential, infinitesimal form of the equation above (which is known as the integral continuity equation). You do this by integrating over a very small cube; I'll spare you the details, but it's an easy computation, and you end up with:</p>
 <p><span class="math">\[ \frac{\partial p^i}{\partial t} + \partial_j \sigma^{ij} = 0\]</span></p>
 <p>or, in vector form:</p>
 <p><span class="math">\[ \frac{\partial \vec p}{\partial t} + \vec \nabla \cdot \sigma = 0 \]</span></p>
-<p>this is the continuity equation or local conservation (in differential form). (note that the density <span class="math">\(\vec p \)</span> is a vector, because it's the density of the vector <span class="math">\(\vec P \)</span>.)</p>
+<p>this is the continuity equation or local conservation (in differential form). (note that the density $p $ is a vector, because it's the density of the vector $P $.)</p>
 <p>In an interacting theory of electromagnetic fields and matter, both contribute to total linear momentum. So, reasonably, both will have a stress tensor:</p>
 <p><span class="math">\[ \sigma^{ij} = \sigma^{ij}_{f} + \sigma^{ij}_{m} \]</span></p>
 <p>and they will <strong>not</strong> be separately conserved. Only their sum, total stress, obeys the continuity equation we just found. The physical interpretation is that momentum can be exchanged between fields and matter. When an electron produces radiation, for example, that radiation carries away momentum from the electron. We can substitute the decomposition in the continuity equation to obtain:</p>
 <p><span class="math">\[ \frac{\partial \vec p_f}{\partial t} + \vec \nabla \cdot \sigma_f = - \frac{\partial \vec p_m}{\partial t} + \vec \nabla \cdot \sigma_m =: \vec s \]</span></p>
 <p>Where I have defined the source term <span class="math">\(s\)</span>.</p>
 <p>This source term encapsulate the passage of momentum from charged matter to fields. So field momentum is not conserved separately, and s represents &quot;generation&quot; of momentum from charges. Fittingly, the equation is now called a continuity equation with sources.</p>
-<p>So the Maxwell stress tensor is just <span class="math">\(\sigma_f \)</span>, the stress tensor for only the electromagnetic field.</p>
+<p>So the Maxwell stress tensor is just $_f $, the stress tensor for only the electromagnetic field.</p>
 <p>What I've detailed up to now is the physical interpretation in general of the stress tensor in any local theory; classical EM is just the first field theory one usually encounters. The actual form of the tensor for electromagnetism in terms of <span class="math">\(E\)</span> &amp; <span class="math">\(B\)</span> is computed from the Poynting vector and a full derivation is presented in any decent CED textbook.</p>
 
 			</div>

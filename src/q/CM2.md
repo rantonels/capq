@@ -34,7 +34,7 @@ This speed is not gigantic for mm-distant atoms. *But*:
 
 The energy imparted on the atom is
 
-$E = \frac{1}{2} m K^2 \frac{1}{b} $
+$$E = \frac{1}{2} m K^2 \frac{1}{b} $$
 
 and it's no big deal to use this formula as a good order-of-magnitude estimate also in the relativistic small-$b$ regime. I use as $m$ the oxygen atom mass. At one nanometre distance the energy is around
 
@@ -44,7 +44,7 @@ which is pretty large, absolutely relativistic in fact. (The rest energy of Oxyg
 
 $$ E_T = \int_\text{assume a cylindrical human} dV \,n \,E(b)  = \frac{nmK^2}{2} \int_\epsilon^R L \, 2\pi b \,db \, \frac{1}{b^2} $$
 
-I've used cilindrical coordinates centered on the trajectory. I cannot integrate the impact parameter to 0 because that would make the integral divergent. However, we have a physical cutoff: under the ångström scale the material is not uniform. No atoms will in general be closer to the black hole than an ångström; the spacing itself between atoms is surely larger than the atoms themselves. So we set $\epsilon = 1 \overset{\circ}{A} $. This is justified because the integral is only logarithmically divergent:
+I've used cilindrical coordinates centered on the trajectory. I cannot integrate the impact parameter to 0 because that would make the integral divergent. However, we have a physical cutoff: under the ångström scale the material is not uniform. No atoms will in general be closer to the black hole than an ångström; the spacing itself between atoms is surely larger than the atoms themselves. So we set $\epsilon = 1 \overset{\circ}{A}$. This is justified because the integral is only logarithmically divergent:
 
 $$ E_T = \pi L n m K^2 \,\ln \left(\frac{1 \mathrm{m}}{1 \overset{\circ}{A}}\right) $$
 
