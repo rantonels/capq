@@ -30,8 +30,10 @@ categories = {
             ]),
     'GR':(80,'General Relativity',[
             "GR1"
+            #GR2 coming along
             ]),
     'QFT':(90,'General Quantum Field Theory/Many Body/Relativistic QM',[
+            "QFT1"
             ]),
     'NP':(100,'Nuclear Physics',[
             ]),

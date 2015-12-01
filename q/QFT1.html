@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>CAPQ - </title>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../style/style.css">
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+<div class="col-md-12 qheader text-center">
+	CAPQ - <a href="../">back to index</a>
+
+</div>
+
+
+
+<div class="container">
+	<div class="col-md-12 questionbody">
+
+
+		<h1 id="qft1---what-is-imaginary-time-and-what-is-meant-by-euclidean-spacetime">QFT1 - What is &quot;imaginary time&quot;? And what is meant by &quot;Euclidean spacetime&quot;?</h1>
+<p>Take the Minkowski metric in <span class="math">\((1,d)\)</span>-dimensional spacetime:</p>
+<p><span class="math">\[ds^2 = - dx_0^2 + dx_1^2 + \ldots + dx_d^2\]</span></p>
+<p>(I'm using the <span class="math">\((-,+,+,+)\)</span> convention, like general relativists. You can also redo this with <span class="math">\((+,-,-,-)\)</span>, nothing of substance changes)</p>
+<p>Then there's this curious fact. Assume that time <span class="math">\(x_0\)</span> is a complex variable for some reason, and consider the change of variables <span class="math">\(x_{d+1} = i x_0\)</span>. The above metric, by substitution, becomes</p>
+<p><span class="math">\[ds^2 = dx_{d+1}^2 + dx_1^2 + \ldots + dx_d^2\]</span></p>
+<p>which is indeed (when <span class="math">\(x_{d+1}\)</span> assumes real values) the standard metric on <span class="math">\((d+1)\)</span>-dimensional Euclidean space in flat coordinates <span class="math">\(x_1, \ldots, x_{d+1}\)</span>. We've effectively &quot;swapped a time dimension with a space dimension&quot;. In the complex time plane, we've just rotated 90 degrees.</p>
+<p>When <span class="math">\(x_{d+1}\)</span> is real, <span class="math">\(x_0\)</span> is purely imaginary, so that's what imaginary time means.</p>
+<p>This might seem completely pointless in terms of physical theories, but it's actually extremely important in modern physics.</p>
+<p>Essentially, assume you're trying to compute a particular observable quantity in some theory set in a <span class="math">\((1,d)\)</span>-dimensional spacetime; for example, a quantum field theory. The quantity might be a function of a series of spacetime events:</p>
+<p><span class="math">\[A(x,y,z,\ldots)\]</span></p>
+<p>where <span class="math">\(x, y, z, \ldots\)</span> are each spacetime events and therefore have <span class="math">\(d+1\)</span> coordinates <span class="math">\(x_0,\ldots,x_d\)</span>, <span class="math">\(y_0,\ldots,y_d\)</span> etc.</p>
+<p>Let's explicitate the dependence of <span class="math">\(A\)</span> on <span class="math">\(x\)</span> in detail:</p>
+<p><span class="math">\[A(x_0, x_1, \ldots, x_d, \ldots)\]</span></p>
+<p>Now, what if <span class="math">\(A\)</span> was an <strong>analytic</strong> function of each of its arguments? Remember that analytic means that the function can be differentiated infinite times and each derivative is a continuous function, <em>and</em> the Taylor series that you obtain from these derivatives converges everywhere <em>and</em> converges to the original function. If it <em>is</em> analytic (and often it is or is very close to being so) then it can be proven that it can be extended to an analytic function on the complex plane (for each single variable, actually) and analytic functions of a complex variable are actually holomorphic. Holomorphy is the most beautiful property a function can have and if you have one of those on your hands, you're basically invincible.</p>
+<p>If it is so, then we can consider evaluating the function for imaginary values of <span class="math">\(x_0, y_0, z_0,\ldots\)</span> even though that doesn't seem to correspond to anything physically meaningful for our theory. Mathematically, there's nothing wrong with it, and so we consider</p>
+<p><span class="math">\[A(i x_{d+1}, x_1, \ldots, x_d , i y_{d+1}, \ldots ) =: B(x_1,\ldots,x_{d+1},y_1,\ldots)\]</span></p>
+<p>That last line was a definition of the new function <span class="math">\(B\)</span>. <span class="math">\(B\)</span> is actually <span class="math">\(A\)</span> but evaluated at imaginary times (and with the arguments rearranged to put them in a reasonable order).</p>
+<p>Now, what could <span class="math">\(B\)</span> <em>physically</em> be? It's an analytic function of some coordinates in an Euclidean <span class="math">\((d+1)\)</span>-dimensional space, that looks a lot like <span class="math">\(A\)</span>. It turns out that (in general) <span class="math">\(B\)</span> is indeed the same thing as <span class="math">\(A\)</span> was originally, but computed <em>as if</em> the original theory was not set in <span class="math">\((1,d)\)</span>-dimensional spacetime, but in a Euclidean <span class="math">\((d+1)\)</span>-dimensional space, without time.</p>
+<p>For example, say we're working on a quantum field theory on three dimensional space plus a dimension of time. <span class="math">\(A(x,y)\)</span> could be the answer to the question:</p>
+<p>if I create a particle at position and time <span class="math">\(x\)</span>, what is the probability of finding a particle at position and time <span class="math">\(y\)</span>?</p>
+<p>then <span class="math">\(B(P,Q)\)</span> could answer an analogous question in a quantum theory set on 4-dimensional space without time, for example:</p>
+<p>if I create a particle at (4D) position <span class="math">\(P\)</span>, what is the probability of finding a particle at position <span class="math">\(Q\)</span>?</p>
+<p>Now, calculating <span class="math">\(A\)</span> can often help finding <span class="math">\(B\)</span> and vice versa. The question is: why would one want to do this? The reason is that almost always <span class="math">\(A\)</span> will <strong>not</strong> be as regular as I've assumed. It often won't be analytic and many times it will be defined by a divergent integral. However, enough analytic structure will be present to extend the function to the complex plane, except for singularities (poles and branch cut). We can then try to find the corresponding B, which often is more regular and well-behaved, <em>and</em> simpler to compute. When done, we can attempt &quot;rotating back&quot; 90° to find our original function.</p>
+<p>This whole ordeal of switching from a <span class="math">\((1,d)\)</span>-spacetime quantum theory to a <span class="math">\((1+d)\)</span>-Euclidean quantum theory to compute observables and then switching back is called a <strong>Wick rotation</strong>. Sometimes this is necessary for the spacetime (henceforth Lorentzian) theory to even make sense. A quantum theory is defined by a Feynman path-integral over all possible classical configurations, but this very often diverges in Lorentzian spacetime because it's highly oscillatory. To make sense of it we Wick-rotate to the Euclidean theory, where the path integral is actually very easily dealt with. The reason lies in the fact that the symmetry group of Euclidean n-dimensional space (the orthogonal group <span class="math">\(O(n)\)</span>) has many desirable properties that the symmetry group of <span class="math">\((1,n-1)\)</span>-spacetime (Lorentz group <span class="math">\(O(1,n-1)\)</span>) does not have. So for many quantum relativistic theories the Wick-rotation must be included to even define the theory.</p>
+<p>Wick rotation is mostly used in QFT, where it maps quantum field theories to quantum statistical mechanics systems in a +1 higher dimensional space. However, it is also important in more general quantum systems such as string theories or quantum gravity.</p>
+
+			</div>
+</div>
+</body>
+</html>
