@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>CAPQ - </title>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../style/style.css">
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+<div class="col-md-12 qheader text-center">
+	CAPQ - <a href="../">back to index</a>
+
+</div>
+
+
+
+<div class="container">
+	<div class="col-md-12 questionbody">
+
+
+		<h1 id="singularity">Singularity</h1>
+<p>So let's imagine we're in our last moments in our life. The singularity is close, so <span class="math">\(r \ll r_S\)</span>. Let's now fix units such that <span class="math">\(r_S = 1\)</span>. We have the following approximation for the <span class="math">\(f(r)\)</span> factor:</p>
+<p><span class="math">\[1 - \frac{1}{r} \sim - \frac{1}{r}\]</span></p>
+<p>therefore the metric becomes</p>
+<p><span class="math">\[ds^2 \sim \frac{1}{r} dt^2 - r dr^2 + r^2 d\Omega^2\]</span></p>
+<p>Now, first thing we want to do is rename <span class="math">\(t\)</span>, since it is now spacelike, a space direction. This is a no-op but it's useful to avoid confusion. So</p>
+<p><span class="math">\[t \longrightarrow x\]</span></p>
+<p>Also, a more meaningful coordinate change we really need is to reparametrize <span class="math">\(r\)</span> as our proper time. <span class="math">\(r\)</span> is indeed a time coordinate, but not exactly &quot;our&quot; time, as in the time <span class="math">\(\tau\)</span> we would measure, because that is <span class="math">\(d\tau^2 = - ds^2\)</span> computed over our worldline. So we have</p>
+<p><span class="math">\[d\tau^2 = r dr^2\]</span></p>
+<p>This can be solved by taking the square root and integrating:</p>
+<p><span class="math">\[\tau = r^{1/2} dr \Rightarrow \tau = \frac{2}{3} r^{3/2} \Rightarrow \left( \frac{3}{2} \tau \right)^{2/3}\]</span></p>
+<p>I've chosen the constant of integration so that <span class="math">\(\tau=0\)</span> at the singularity <span class="math">\(r=0\)</span>. The metric is now, substituting:</p>
+<p><span class="math">\[ds^2 = -d\tau^2 + \left(\frac{3}{2}\tau\right)^{-2/3} dx^2 +  \left(\frac{3}{2}\tau\right)^{4/3} d\Omega^2\]</span></p>
+<p>Which is very convenient because it's diagonal (there are no mixed terms like <span class="math">\(d\tau \, dx\)</span>).</p>
+<p>Let's review the domains of these coordinates. <span class="math">\(\tau\)</span> lies in the vague interval <span class="math">\(0 &lt; \tau \leq \epsilon\)</span> with the small number <span class="math">\(\epsilon\)</span> small enough for our approximation <span class="math">\(r \ll 1\)</span> to work. I chose <span class="math">\(0.25\)</span> for the simulation. <span class="math">\(\tau\)</span> runs backwards, and equals our proper time left until the singularity.</p>
+<p><span class="math">\(x\)</span> is actually <span class="math">\(t\)</span> so it lies in <span class="math">\(\mathbb{R}\)</span>. Therefore space extends indefinitely in the <span class="math">\(x\)</span> direction. Not that it matters much, since there's only so much we can travel in that direction before dying.</p>
+<p><span class="math">\(\theta\)</span> and <span class="math">\(\phi\)</span> still parametrize a sphere <span class="math">\(\mathbb{S}^2\)</span>. If we were to only consider the equator of the sphere (which we will do for visualization purposes), fixing <span class="math">\(\theta = \frac{\pi}{2}\)</span>, <span class="math">\(\phi\)</span> would run from <span class="math">\(0\)</span> to <span class="math">\(2\pi\)</span> along the equator.</p>
+<p>So our spacetime, on a purely topological standpoint (i.e. only considering the <em>shape</em>, ignoring the metric) close to the singularity looks like:</p>
+<p><span class="math">\[(0,\epsilon]_\tau \times \left( \mathbb{R}_x \times \mathbb{S^2}_{\theta,\phi} \right)\]</span></p>
+<p>and the part in parentheses is space at a given time. However, our metric is really nice and it likes this decomposition. The metric restricted to the first of these three pieces is</p>
+<p><span class="math">\[ds^2 = - d\tau^2\]</span></p>
+<p>That just means that <span class="math">\(\tau\)</span> is our proper time, which we knew already. On the <span class="math">\(x\)</span> line:</p>
+<p><span class="math">\(ds^2 = \left( \frac{3}{2} \tau \right)^{-2/3} dx^2\)</span></p>
+<p>but that's just the normal metric on the real line <span class="math">\(dl = dx\)</span>, just rescaled by a factor <span class="math">\(\left( \frac{3}{2} \tau \right)^{-1/3}\)</span>. Therefore it's just a normal line, but &quot;stretched&quot; over time as <span class="math">\(\tau^{-1/3}\)</span>. It becomes infinitely stretched as <span class="math">\(\tau\rightarrow 0\)</span>, in the sense that the distance between a point at <span class="math">\(x=0\)</span> and one at <span class="math">\(x=1\)</span> grows to infinity at the singularity.</p>
+<p>Similarly for the sphere:</p>
+<p><span class="math">\[ds^2 = \left( \frac{3}{2} \tau \right)^{4/3} d\Omega^2\]</span></p>
+<p>Since <span class="math">\(dl = d\Omega\)</span> is the line element on a unit sphere, our line element is that on a sphere of radius</p>
+<p><span class="math">\[R = \left( \frac{3}{2} \tau \right)^{2/3} \]</span></p>
+<p>This sphere <em>shrinks</em> as we approach the singularity. Two points (at the same <span class="math">\(x\)</span>) at different point on the sphere get closer as we reach the singularity.</p>
+<p>The structure of spacetime is therefore as such: at any given time, space is a &quot;spherinder&quot; (cartesian of line and 2-sphere) where the line is stretching as <span class="math">\(\tau^{-1/3}\)</span>, and the sphere is shrinking as <span class="math">\(\tau^{2/3}\)</span>.</p>
+<div class="figure">
+<img src="../images/singularity/cylinder.gif" alt="I have no idea how to write greek letters in gnuplot with the gif term" />
+<p class="caption">I have no idea how to write greek letters in gnuplot with the gif term</p>
+</div>
+<p>Here I've tried to depict the shape of this spacetime. The time of the gif, also displayed on top, is just <span class="math">\(\tau\)</span>. The cylinder is actually just space, at time <span class="math">\(\tau\)</span>. I've omitted the <span class="math">\(\theta\)</span> dimension for clarity, so that our sphere becomes a circle and space becomes a cylinder. We have a poor bloke who has had the misfortune of falling into the black hole, he is aligned head to toe along the <span class="math">\(x\)</span> dimension, and has arms and legs extended along <span class="math">\(\phi\)</span> (please ignore bad art skills). The cylinder should actually extend infinitely in <span class="math">\(x\)</span>, but I've only drawn a piece of it, it doesn't really matter since it's not like we have a lot of time to travel around.</p>
+<p>Please take note of this <strong>very important</strong> point: this is an embedding diagram. The empty white space where the cylinder is immersed <em>does not exist</em>, nor does it refer to anything physical. We just needed to set up our cylinder in a 3-dimensional space for visual purposes, but this is not something that is needed for the mathematical formulation. There's no outside and our little man can only move in and see the surface of the cylinder.</p>
+<p>In these coordinates, the singularity is not some place in space, in fact it never is visible in space as long as <span class="math">\(\tau &gt; 0\)</span>. It's just something that <em>happens</em> to space, at the time <span class="math">\(\tau=0\)</span>. Something evidently bad.</p>
+<p>This translates also to our person. He gets stretched in one direction and compressed in the other two. Different points along the length of his body are at different, constant <span class="math">\(x\)</span> positions, and so they get further and further apart like we saw earlier. So this is the most extreme form of <strong>spaghettification</strong>; any possible physical structure is destroyed by this at some positive <span class="math">\(\tau\)</span> before the singularity. It's interesting to note that in the inner region spaghettification does not actually stretch something <em>towards</em> the singularity (which is impossible, because the singularity is not in some direction, but in the future) but in a spatial direction which is actually the original <span class="math">\(t\)</span> direction. Trippy stuff.</p>
+<div class="figure">
+<img src="../images/singularity/amatricianal.jpg" alt="these aren&#39;t actually spaghetti, but bucatini all&#39;amatriciana, even though the traditional recipe from the town of Amatrice, Lazio actually requires spaghetti. It&#39;s great both ways." />
+<p class="caption">these aren't actually spaghetti, but bucatini all'amatriciana, even though the traditional recipe from the town of Amatrice, Lazio actually requires spaghetti. It's great both ways.</p>
+</div>
+<p>Now, for the yellow triangles. These are photons/light rays emitted in the <span class="math">\(\phi\)</span> direction at the beginning of the gif by three points of the body of our adventurer. That's how <em>slow</em> light is compared to how quickly our changes in spacetime happen. One however would expect that since the radius of the sphere is shrinking, maybe light, moving at a constant speed, should be able to circle it more easily as we are close to the singularity, maybe making even infinite turns spiraling in. Not quite.</p>
+<p>The equation for a light ray is given by the line element being zero:</p>
+<p><span class="math">\[ds^2 = 0 \Rightarrow d\tau = \left(\frac{3}{2} \tau \right)^{-2/3} d\phi \Rightarrow \phi = 3\left(\frac{2}{3}\right)^{2/3} \tau^{1/3} \]</span></p>
+<p>So no, it does not spiral in making infinite turns (we'd have seen a negative power of <span class="math">\(\tau\)</span>), the sphere does not get small fast enough for that to happen.</p>
+<p>Ok, but then I was struck by the immensely pointless question: does it even make one full turn from the horizon to the singularity? We can't use our approximations since we want to consider the interval <span class="math">\(0 &lt; r &lt; 1\)</span> which is <span class="math">\(0 &lt; \tau &lt; 2/3\)</span>. We have to get back to the full metric. We imagine a photon emitted in the <span class="math">\(r,\phi\)</span> plane right as we cross the horizon, with no velocity in the <span class="math">\(t\)</span> or <span class="math">\(\theta\)</span> directions. We set <span class="math">\(ds^2=0\)</span> and so</p>
+<p><span class="math">\[- f(r)^-1 dr^2 = d\phi^2 \Rightarrow \frac{dr^2}{r(1-r)} = d\phi^2\]</span></p>
+<p>so that the total angle travelled is given by the integral</p>
+<p><span class="math">\[\Phi = \int_0^1 \frac{dr}{\sqrt{r(1-r)}} = \pi\]</span></p>
+<p>so it makes exactly half a turn. I am extremely satisfied by the simplicity of this result.</p>
+
+			</div>
+</div>
+</body>
+</html>
